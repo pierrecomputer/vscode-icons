@@ -1,21 +1,39 @@
 {
-  "name": "pierre-vscode-icons",
+  "name": "@pierre/vscode-icons",
   "displayName": "Pierre VS Code Icons",
   "description": "File icon theme for VS Code backed by source SVGs.",
   "version": "0.0.1",
-  "publisher": "local",
+  "publisher": "pierrecomputer",
+  "license": "MIT",
   "type": "module",
-  "private": true,
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#141415",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierrecomputer/vscode-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/pierrecomputer/vscode-icons/issues"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "icons",
+    "pierre",
+    "file-icons",
+    "icon-theme"
+  ],
   "scripts": {
     "build": "node scripts/build-icon-theme.mjs",
     "watch": "node scripts/watch-svgs.mjs",
-    "package": "npm run build"
+    "package": "npm run build && node scripts/package-vsix.mjs"
   },
   "contributes": {
     "iconThemes": [
@@ -26,7 +44,11 @@
       }
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
+    "@vscode/vsce": "^3.2.2",
     "svgo": "^4.0.1"
   }
 }

@@ -1,6 +1,9 @@
-scripts/**
-README.md
 .vscode/**
-.git/**
+.github/
+.gitignore
 node_modules/
+package-lock.json
+scripts/
+svgs/
+svgo.config.js
 *.vsix
