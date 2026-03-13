@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Icon Theme Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "preLaunchTask": "build icon theme",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "${workspaceFolder}"
+      ]
+    }
+  ]
+}

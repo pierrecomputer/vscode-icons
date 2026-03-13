@@ -1,0 +1,6 @@
+scripts/**
+README.md
+.vscode/**
+.git/**
+node_modules/
+*.vsix

@@ -1,0 +1,32 @@
+{
+  "name": "pierre-vscode-icons",
+  "displayName": "Pierre VS Code Icons",
+  "description": "File icon theme for VS Code backed by source SVGs.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "scripts": {
+    "build": "node scripts/build-icon-theme.mjs",
+    "watch": "node scripts/watch-svgs.mjs",
+    "package": "npm run build"
+  },
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "pierre-icons-minimal",
+        "label": "Pierre Icons (Minimal)",
+        "path": "./icons/theme-minimal.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "svgo": "^4.0.1"
+  }
+}
