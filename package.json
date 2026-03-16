@@ -41,6 +41,11 @@
         "id": "pierre-icons-minimal",
         "label": "Pierre Icons (Minimal)",
         "path": "./icons/theme-minimal.json"
+      },
+      {
+        "id": "pierre-icons",
+        "label": "Pierre Icons",
+        "path": "./icons/theme-default.json"
       }
     ]
   },

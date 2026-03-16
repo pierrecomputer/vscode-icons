@@ -1,4 +1,5 @@
 node_modules/
 icons/
+test/
 .DS_Store
 *.vsix
