@@ -1,4 +1,6 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2Z" fill="black"/>
-<path d="M10.5 13H13V3H3V13H8V5.5H10.5V13Z" fill="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+
+<path id="Vector" opacity="0.2" d="M2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2Z" fill="#6C6C71" class="vector"/>
+<path id="Vector_2" d="M10.5 13H13V3H3V13H8V5.5H10.5V13Z" fill="#6C6C71"/>
+
 </svg>

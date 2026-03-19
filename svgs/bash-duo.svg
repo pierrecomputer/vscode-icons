@@ -1,4 +1,6 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M8 1C2.2355 1 1 2.2355 1 8C1 13.7645 2.2355 15 8 15C13.7645 15 15 13.7645 15 8C15 2.2355 13.7645 1 8 1Z" fill="currentColor"/>
-<path d="M8.5 11.5H11.5M6 5.5C5.17157 5.5 4.5 6.05964 4.5 6.75C4.5 7.44036 5.1 7.79904 6 8C6.9 8.20096 7.5 8.55964 7.5 9.25C7.5 9.94036 6.82843 10.5 6 10.5M6 5.5C6.82843 5.5 7.5 6.05964 7.5 6.75M6 5.5V4.5M6 10.5C5.17157 10.5 4.5 9.94036 4.5 9.25M6 10.5V11.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+
+<path id="bg" opacity="0.2" d="M8 1C2.2355 1 1 2.2355 1 8C1 13.7645 2.2355 15 8 15C13.7645 15 15 13.7645 15 8C15 2.2355 13.7645 1 8 1Z" fill="#6C6C71" class="bg"/>
+<path id="fg" d="M8.5 11.5H11.5M6 5.5C5.17157 5.5 4.5 6.05964 4.5 6.75C4.5 7.44036 5.1 7.79904 6 8C6.9 8.20096 7.5 8.55964 7.5 9.25C7.5 9.94036 6.82843 10.5 6 10.5M6 5.5C6.82843 5.5 7.5 6.05964 7.5 6.75M6 5.5V4.5M6 10.5C5.17157 10.5 4.5 9.94036 4.5 9.25M6 10.5V11.5" stroke="#6C6C71" stroke-linecap="round" stroke-linejoin="round" class="fg"/>
+
 </svg>
