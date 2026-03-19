@@ -33,7 +33,10 @@
   "scripts": {
     "build": "node scripts/build-icon-theme.mjs",
     "watch": "node scripts/watch-svgs.mjs",
-    "package": "npm run build && node scripts/package-vsix.mjs"
+    "package": "npm run build && node scripts/package-vsix.mjs",
+    "lint": "oxlint scripts/",
+    "format": "oxfmt scripts/",
+    "format:check": "oxfmt --check scripts/"
   },
   "contributes": {
     "iconThemes": [
@@ -59,6 +62,8 @@
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.2",
+    "oxfmt": "^0.41.0",
+    "oxlint": "^1.56.0",
     "svgo": "^4.0.1"
   }
 }

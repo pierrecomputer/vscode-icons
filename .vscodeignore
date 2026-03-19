@@ -6,4 +6,6 @@ package-lock.json
 scripts/
 svgs/
 svgo.config.js
+test/
+.oxfmtrc.json
 *.vsix

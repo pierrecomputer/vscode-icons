@@ -24,7 +24,7 @@ watch(svgsDir, { recursive: false }, (eventType, filename) => {
         console.log("🔨 Rebuilding...");
         execSync("npm run build", { cwd: rootDir, stdio: "inherit" });
         console.log("✅ Rebuild complete\n");
-      } catch (error) {
+      } catch {
         console.error("❌ Build failed\n");
       }
     });
