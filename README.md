@@ -1,15 +1,23 @@
-# Peti VS Code Icons
+# Pierre Icons for VS Code
 
-Minimal starter file icon theme for VS Code.
+File icon theme for VS Code with three tiers and per-icon palette colors.
 
-## What it does
+## Themes
 
-- Uses the built-in VS Code Seti icon theme as the base and overlays your custom SVGs
-- Sources custom icons from `svgs/`
-- Ships starter mappings for:
-  - `package.json`, `.npmrc`, `package-lock.json`, `npm-shrinkwrap.json` -> `svgs/npm.svg`
-  - `*.js`, `*.cjs`, `*.mjs` -> `svgs/javascript.svg`
-  - `*.css`, `*.module.css`, `*.scss`, `*.sass`, `*.less`, `*.postcss` and related CSS-family language modes -> `svgs/css.svg`
+The extension ships three icon themes, each building on the last:
+
+- **Pierre Icons (Minimal)** -- file, folder, text, and image icons only. Monochrome.
+- **Pierre Icons** -- adds language icons (JS, TS, CSS, HTML, Python, Go, Rust, Ruby, Swift, Bash, Markdown) plus font, SVG, JSON, and git. Monochrome.
+- **Pierre Icons (Complete)** -- adds framework, tooling, and config icons (React, Vue, Svelte, Astro, Docker, Tailwind, ESLint, Prettier, npm, Vite, webpack, and more). Uses per-icon colors from the [Pierre palette](https://github.com/pierrecomputer/theme).
+
+## Color system
+
+Colors come from the Pierre palette, using level `400` for dark themes and `600` for light themes -- the same scale used for syntax tokens in the [Pierre color theme](https://github.com/pierrecomputer/theme).
+
+Minimal and default tiers are monochrome (gray `400` / `800`). The complete tier applies per-icon colors, with two modes:
+
+- **Single color** (`color(hue)`) -- one palette hue for all paths. Duo-tone icons get visual weight from the `opacity` attribute baked into the SVG's background path.
+- **Dual color** (`duoColor(fg, bg)`) -- separate palette hues for foreground and background paths. Requires SVG paths to have `class="fg"` and `class="bg"` attributes (set in Figma). The build injects a `<style>` block to override bg fills via CSS.
 
 ## Build
 
@@ -17,45 +25,45 @@ Minimal starter file icon theme for VS Code.
 npm run build
 ```
 
-This generates `icons/theme.json` and copies the required Seti font into `icons/seti.woff`.
+This reads source SVGs from `svgs/`, optimizes them with SVGO, stamps dark/light fill colors, and writes the output to `icons/`. Three theme JSON files are generated: `theme-minimal.json`, `theme-default.json`, and `theme-complete.json`.
 
-By default the build reads Seti from `/Applications/Visual Studio Code.app`. If your VS Code app is elsewhere, set `VSCODE_APP_PATH` when building:
+For development, watch mode rebuilds on SVG changes:
 
 ```bash
-VSCODE_APP_PATH="/path/to/Visual Studio Code.app" npm run build
+npm run watch
 ```
 
-## Load locally in VS Code or Cursor
+## Load locally
 
-### Option 1: Run as an extension from source in vanilla VS Code
+### Run from source (VS Code)
 
 1. Open this folder in VS Code.
 2. Run `npm run build`.
 3. Press `F5` to launch an Extension Development Host.
-4. In the new window, choose `Peti Icons` from `File Icon Theme`.
+4. Choose one of the Pierre Icons themes from **File Icon Theme**.
 
-The extension is active in the Extension Development Host window, not the original workspace window.
-
-### Option 2: Install locally into Cursor
+### Package a VSIX
 
 ```bash
-npm run install:cursor
+npm run package
 ```
 
-Then:
+Then install the generated `.vsix` in VS Code or Cursor.
 
-1. Reload Cursor.
-2. Open `Preferences: File Icon Theme`.
-3. Select `Peti Icons`.
+## Adding icons
 
-### Option 3: Package a VSIX
+1. Add or update SVGs in `svgs/`. For duo-tone icons, use `class="bg"` and `class="fg"` on paths.
+2. Add an entry to the appropriate tier array in `scripts/build-icon-theme.mjs`:
 
-```bash
-npx @vscode/vsce package
+```js
+// Single color
+{ name: "react", color: color(palette.cyan), fileExtensions: ["jsx", "tsx"] }
+
+// Dual color (fg + bg)
+{ name: "lang-python", color: duoColor(palette.blue, palette.yellow), fileExtensions: ["py"] }
+
+// Monochrome (no color property)
+{ name: "font", fileExtensions: ["ttf", "otf", "woff", "woff2"] }
 ```
 
-Then install the generated `.vsix` in VS Code.
-
-## Customize
-
-Replace the SVG files in `svgs/` and extend `scripts/build-icon-theme.mjs` with more filename or extension mappings, then rebuild.
+3. Run `npm run build`.
