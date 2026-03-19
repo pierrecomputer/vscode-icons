@@ -2,7 +2,7 @@
   "name": "@pierre/vscode-icons",
   "displayName": "Pierre VS Code Icons",
   "description": "File icon theme for VS Code backed by source SVGs.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "pierrecomputer",
   "license": "MIT",
   "type": "module",
