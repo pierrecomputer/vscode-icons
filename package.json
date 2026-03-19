@@ -46,6 +46,11 @@
         "id": "pierre-icons",
         "label": "Pierre Icons",
         "path": "./icons/theme-default.json"
+      },
+      {
+        "id": "pierre-icons-complete",
+        "label": "Pierre Icons (Complete)",
+        "path": "./icons/theme-complete.json"
       }
     ]
   },

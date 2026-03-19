@@ -32,7 +32,7 @@ const minimal = [
     "editorconfig",
     "LICENSE", "AUTHORS", "CONTRIBUTORS", "CHANGELOG",
   ]},
-  { name: "image", fileExtensions: [
+  { name: "image-duo", fileExtensions: [
     "png", "jpg", "jpeg", "gif", "svg", "webp", "avif",
     "ico", "icns", "bmp", "tiff", "tif",
   ]},
@@ -61,7 +61,86 @@ const defaults = [
 ];
 
 const complete = [
-  // phase 3
+  // Frameworks & libraries
+  { name: "astro", fileExtensions: ["astro"] },
+  { name: "bootstrap-duo", fileNames: [
+    "bootstrap.min.css", "bootstrap.css", "bootstrap.min.js", "bootstrap.js",
+    "bootstrap.bundle.min.js", "bootstrap.bundle.js",
+  ]},
+  { name: "react", fileExtensions: ["jsx", "tsx"] },
+  { name: "svelte", fileExtensions: ["svelte"] },
+  { name: "vue", fileExtensions: ["vue"] },
+
+  // Languages & formats
+  { name: "graphql", fileExtensions: ["graphql", "gql"] },
+  { name: "sass", fileExtensions: ["scss", "sass"] },
+  { name: "terraform", fileExtensions: ["tf", "tfvars", "tfstate"],
+    fileNames: [".terraform.lock.hcl"] },
+  { name: "wasm-duo", fileExtensions: ["wasm", "wat", "wast"] },
+  { name: "yml", fileExtensions: ["yml", "yaml"] },
+  { name: "zig", fileExtensions: ["zig"] },
+
+  // Tooling configs
+  { name: "npm-duo", fileNames: [
+    "package.json", "package-lock.json", ".npmrc", ".npmignore",
+  ]},
+  { name: "eslint", fileNames: [
+    ".eslintrc", ".eslintrc.json", ".eslintrc.yml", ".eslintrc.yaml",
+    ".eslintrc.js", ".eslintrc.cjs",
+    "eslint.config.js", "eslint.config.mjs", "eslint.config.cjs",
+    "eslint.config.ts", "eslint.config.mts",
+    ".eslintignore",
+  ]},
+  { name: "prettier", fileNames: [
+    ".prettierrc", ".prettierrc.json", ".prettierrc.yml", ".prettierrc.yaml",
+    ".prettierrc.js", ".prettierrc.cjs", ".prettierrc.mjs", ".prettierrc.toml",
+    "prettier.config.js", "prettier.config.cjs", "prettier.config.mjs",
+    ".prettierignore",
+  ]},
+  { name: "stylelint", fileNames: [
+    ".stylelintrc", ".stylelintrc.json", ".stylelintrc.yml", ".stylelintrc.yaml",
+    ".stylelintrc.js", ".stylelintrc.cjs", ".stylelintrc.mjs",
+    "stylelint.config.js", "stylelint.config.cjs", "stylelint.config.mjs",
+    ".stylelintignore",
+  ]},
+  { name: "vite", fileNames: [
+    "vite.config.js", "vite.config.ts", "vite.config.mjs", "vite.config.mts",
+  ]},
+  { name: "svgo", fileNames: [
+    "svgo.config.js", "svgo.config.mjs", "svgo.config.cjs", "svgo.config.ts",
+  ]},
+  { name: "babel", fileNames: [
+    ".babelrc", ".babelrc.json",
+    "babel.config.js", "babel.config.json", "babel.config.cjs", "babel.config.mjs",
+  ]},
+  { name: "docker", fileNames: [
+    "Dockerfile", ".dockerignore",
+    "docker-compose.yml", "docker-compose.yaml", "docker-compose.override.yml",
+    "compose.yml", "compose.yaml",
+  ]},
+  { name: "tailwind", fileNames: [
+    "tailwind.config.js", "tailwind.config.ts",
+    "tailwind.config.mjs", "tailwind.config.cjs",
+  ]},
+  { name: "nextjs", fileNames: [
+    "next.config.js", "next.config.ts", "next.config.mjs", "next.config.mts",
+  ]},
+  { name: "webpack", fileNames: [
+    "webpack.config.js", "webpack.config.ts",
+    "webpack.config.mjs", "webpack.config.cjs",
+    "webpack.config.babel.js",
+  ]},
+  { name: "postcss", fileNames: [
+    "postcss.config.js", "postcss.config.cjs", "postcss.config.mjs",
+    "postcss.config.ts",
+    ".postcssrc", ".postcssrc.json", ".postcssrc.yml", ".postcssrc.yaml",
+  ]},
+  { name: "biome", fileNames: ["biome.json", "biome.jsonc"] },
+  { name: "bun-duo", fileNames: ["bunfig.toml", "bun.lockb", "bun.lock"] },
+  { name: "oxc", fileNames: [".oxlintrc.json"] },
+  { name: "browserslist-duo", fileNames: [".browserslistrc"] },
+  { name: "claude", fileNames: ["CLAUDE.md"] },
+  { name: "vscode", fileExtensions: ["code-workspace"] },
 ];
 
 const tiers = {
@@ -151,12 +230,9 @@ for (const icons of Object.values(tiers)) {
 }
 await Promise.all([...allIcons.keys()].map(generateSvgPair));
 
-const minimalTheme = buildTheme(tiers.minimal);
-const minimalOutput = path.join(iconOutputDir, "theme-minimal.json");
-await writeFile(minimalOutput, `${JSON.stringify(minimalTheme, null, 2)}\n`);
-console.log(`Wrote ${path.relative(rootDir, minimalOutput)}`);
-
-const defaultTheme = buildTheme(tiers.default);
-const defaultOutput = path.join(iconOutputDir, "theme-default.json");
-await writeFile(defaultOutput, `${JSON.stringify(defaultTheme, null, 2)}\n`);
-console.log(`Wrote ${path.relative(rootDir, defaultOutput)}`);
+for (const [name, icons] of Object.entries(tiers)) {
+  const theme = buildTheme(icons);
+  const out = path.join(iconOutputDir, `theme-${name}.json`);
+  await writeFile(out, `${JSON.stringify(theme, null, 2)}\n`);
+  console.log(`Wrote ${path.relative(rootDir, out)}`);
+}
