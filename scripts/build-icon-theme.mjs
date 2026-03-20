@@ -24,10 +24,6 @@ const tiers = {
 // SVG generation — read source, optimize, stamp dark/light fills
 // ---------------------------------------------------------------------------
 
-function normalizeSvg(svg) {
-  return svg.replaceAll("#6c6c71", "currentColor");
-}
-
 function applyOpacity(svg, opacity) {
   if (!opacity || opacity === 1) return svg;
   return svg.replace("<svg", `<svg opacity="${opacity}"`);
@@ -38,7 +34,7 @@ function applyBgStyle(svg, bgColor) {
 }
 
 function optimizeSvg(raw) {
-  return normalizeSvg(optimize(raw, SVGOConfig).data);
+  return optimize(raw, SVGOConfig).data;
 }
 
 async function generateSvgPair(name, { opacity } = {}) {

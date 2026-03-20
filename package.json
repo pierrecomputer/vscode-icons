@@ -31,12 +31,13 @@
     "icon-theme"
   ],
   "scripts": {
-    "build": "node scripts/build-icon-theme.mjs",
+    "build": "npm run format:svgs && npm run format:check && npm run lint && node scripts/build-icon-theme.mjs",
     "watch": "node scripts/watch-svgs.mjs",
     "package": "npm run build && node scripts/package-vsix.mjs",
     "lint": "oxlint scripts/",
     "format": "oxfmt scripts/",
-    "format:check": "oxfmt --check scripts/"
+    "format:check": "oxfmt --check scripts/",
+    "format:svgs": "node scripts/format-svgs.mjs"
   },
   "contributes": {
     "iconThemes": [

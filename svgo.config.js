@@ -5,7 +5,6 @@ export const SVGOConfig = {
       params: {
         overrides: {
           convertTransform: false,
-          convertColors: { currentColor: 'black' },
           inlineStyles: false,
         },
       },
