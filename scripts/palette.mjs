@@ -7,6 +7,7 @@ export const palette = {
     800: "#6C6C71",
   },
   red: { 400: "#ff6762", 600: "#d52c36" },
+  vermilion: { 400: "#ff8c5b", 600: "#d5512f" },
   orange: { 400: "#ffa359", 600: "#d47628" },
   yellow: { 400: "#ffd452", 600: "#d5a910" },
   green: { 400: "#5ecc71", 600: "#199f43" },

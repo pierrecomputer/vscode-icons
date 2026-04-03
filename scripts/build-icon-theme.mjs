@@ -109,16 +109,20 @@ function buildTheme(icons, { colored = false } = {}) {
     }
   }
 
+  const hasSymlink = icons.some((i) => i.name === "file-symlink-duo");
+
   const theme = {
     iconDefinitions,
     file: "file-duo",
     folder: "folder-duo",
     folderExpanded: "folder-open-duo",
+    ...(hasSymlink && { fileSymlink: "file-symlink-duo" }),
     fileExtensions,
     light: {
       file: "file-duo_light",
       folder: "folder-duo_light",
       folderExpanded: "folder-open-duo_light",
+      ...(hasSymlink && { fileSymlink: "file-symlink-duo_light" }),
       fileExtensions: lightFileExtensions,
     },
   };
