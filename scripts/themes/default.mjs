@@ -64,6 +64,10 @@ export default [
     fileExtensions: ["csv", "tsv", "xls", "xlsx", "ods"],
   },
   {
+    name: "file-zip-duo",
+    fileExtensions: ["zip", "tar", "gz", "tgz", "bz2", "xz", "7z", "rar", "jar", "war"],
+  },
+  {
     name: "font",
     fileExtensions: ["ttf", "otf", "woff", "woff2", "eot"],
   },

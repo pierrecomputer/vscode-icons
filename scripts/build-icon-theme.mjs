@@ -87,8 +87,18 @@ function buildTheme(icons, { colored = false } = {}) {
   const lightFileExtensions = {};
   const fileNames = {};
   const lightFileNames = {};
+  const folderNames = {};
+  const lightFolderNames = {};
+  const folderNamesExpanded = {};
+  const lightFolderNamesExpanded = {};
 
-  for (const { name, color: iconColor, fileExtensions: exts, fileNames: names } of icons) {
+  for (const {
+    name,
+    color: iconColor,
+    fileExtensions: exts,
+    fileNames: names,
+    folderNames: folders,
+  } of icons) {
     const hasColor = colored && iconColor;
     const darkPath = hasColor ? `./${name}-color.svg` : `./${name}.svg`;
     const lightPath = hasColor ? `./${name}-color-light.svg` : `./${name}-light.svg`;
@@ -105,6 +115,14 @@ function buildTheme(icons, { colored = false } = {}) {
       for (const fn of names) {
         fileNames[fn] = name;
         lightFileNames[fn] = `${name}_light`;
+      }
+    }
+    if (folders) {
+      for (const fn of folders) {
+        folderNames[fn] = name;
+        lightFolderNames[fn] = `${name}_light`;
+        folderNamesExpanded[fn] = name;
+        lightFolderNamesExpanded[fn] = `${name}_light`;
       }
     }
   }
@@ -130,6 +148,13 @@ function buildTheme(icons, { colored = false } = {}) {
   if (Object.keys(fileNames).length > 0) {
     theme.fileNames = fileNames;
     theme.light.fileNames = lightFileNames;
+  }
+
+  if (Object.keys(folderNames).length > 0) {
+    theme.folderNames = folderNames;
+    theme.folderNamesExpanded = folderNamesExpanded;
+    theme.light.folderNames = lightFolderNames;
+    theme.light.folderNamesExpanded = lightFolderNamesExpanded;
   }
 
   return theme;
