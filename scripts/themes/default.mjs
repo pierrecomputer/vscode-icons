@@ -53,6 +53,17 @@ export default [
     fileNames: ["Gemfile", "Rakefile"],
   },
   {
+    name: "file-symlink-duo",
+  },
+  {
+    name: "server-duo",
+    fileExtensions: ["db", "sql", "sqlite", "sqlite3"],
+  },
+  {
+    name: "file-table-duo",
+    fileExtensions: ["csv", "tsv", "xls", "xlsx", "ods"],
+  },
+  {
     name: "font",
     fileExtensions: ["ttf", "otf", "woff", "woff2", "eot"],
   },
@@ -72,8 +83,7 @@ export default [
   },
   {
     name: "git",
-    color: color(palette.orange),
-    opacity: 0.75,
+    color: color(palette.vermilion),
     fileNames: [".gitignore", ".gitattributes", ".gitmodules", ".gitkeep"],
   },
 ];

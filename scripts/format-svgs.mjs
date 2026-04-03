@@ -16,12 +16,13 @@ const svgoConfig = {
           convertTransform: false,
           inlineStyles: false,
           convertColors: false,
+          convertPathData: { floatPrecision: 3 },
         },
       },
     },
     {
       name: "removeAttrs",
-      params: { attrs: ["id"] },
+      params: { attrs: ["data-*"] },
     },
     "sortAttrs",
   ],
@@ -29,7 +30,8 @@ const svgoConfig = {
 
 function preprocess(svg) {
   return svg
-    .replace(/<defs>[\s\S]*?<\/defs>/g, "")
+    .replace(/<clipPath[\s\S]*?<\/clipPath>/g, "")
+    .replace(/<defs>\s*<\/defs>/g, "")
     .replace(/<g[^>]*>/g, "")
     .replace(/<\/g>/g, "")
     .replace(/\s+clip-path="[^"]*"/g, "");
@@ -37,7 +39,7 @@ function preprocess(svg) {
 
 function postprocess(svg) {
   return svg
-    .replace(/fill="(?!none|currentColor)[^"]+"/g, 'fill="currentColor"')
+    .replace(/fill="(?!none|currentColor|url\()[^"]+"/g, 'fill="currentColor"')
     .replace(/\s+stroke(?:-[\w-]+)?="[^"]*"/g, "");
 }
 

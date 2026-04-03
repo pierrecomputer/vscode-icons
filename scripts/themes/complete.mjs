@@ -256,13 +256,13 @@ const tooling = [
   },
   {
     name: "bun-duo",
-    // color: color(palette.orange),
-    color: duoColor(palette.pink, palette.orange),
+    color: color(palette.brown),
+    // color: duoColor(palette.pink, palette.brown),
     fileNames: ["bunfig.toml", "bun.lockb", "bun.lock"],
   },
   {
     name: "oxc",
-    color: color(palette.orange),
+    color: color(palette.cyan),
     fileNames: [".oxlintrc.json"],
   },
   {
