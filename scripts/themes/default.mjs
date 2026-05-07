@@ -41,6 +41,11 @@ export default [
     fileExtensions: ["go"],
   },
   {
+    name: "lang-c",
+    color: color(palette.blue),
+    fileExtensions: ["c", "h", "cpp", "cc", "cxx", "hpp", "hh", "hxx", "inl", "m", "mm", "cs"],
+  },
+  {
     name: "lang-python",
     color: duoColor(palette.blue, palette.yellow),
     fileExtensions: ["py", "pyw", "pyi", "pyx"],
