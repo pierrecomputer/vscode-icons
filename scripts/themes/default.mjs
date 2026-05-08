@@ -43,7 +43,25 @@ export default [
   {
     name: "lang-c",
     color: color(palette.blue),
-    fileExtensions: ["c", "h", "cpp", "cc", "cxx", "hpp", "hh", "hxx", "inl", "m", "mm", "cs"],
+    fileExtensions: ["c", "h"],
+  },
+  {
+    name: "lang-cpp",
+    svgName: "lang-c",
+    color: color(palette.blue),
+    fileExtensions: ["cpp", "cc", "cxx", "hpp", "hh", "hxx", "inl"],
+  },
+  {
+    name: "lang-csharp",
+    svgName: "lang-c",
+    color: color(palette.purple),
+    fileExtensions: ["cs"],
+  },
+  {
+    name: "lang-objc",
+    svgName: "lang-c",
+    color: color(palette.vermilion),
+    fileExtensions: ["m", "mm"],
   },
   {
     name: "lang-python",

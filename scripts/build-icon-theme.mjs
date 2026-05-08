@@ -37,8 +37,8 @@ function optimizeSvg(raw) {
   return optimize(raw, SVGOConfig).data;
 }
 
-async function generateSvgPair(name, { opacity } = {}) {
-  const srcPath = path.join(svgDir, `${name}.svg`);
+async function generateSvgPair(name, { opacity, svgName } = {}) {
+  const srcPath = path.join(svgDir, `${svgName ?? name}.svg`);
   const raw = await readFile(srcPath, "utf8");
   const optimized = optimizeSvg(raw);
 
@@ -49,8 +49,8 @@ async function generateSvgPair(name, { opacity } = {}) {
   await writeFile(path.join(iconOutputDir, `${name}-light.svg`), lightSvg);
 }
 
-async function generateColoredSvg(name, iconColor, { opacity } = {}) {
-  const srcPath = path.join(svgDir, `${name}.svg`);
+async function generateColoredSvg(name, iconColor, { opacity, svgName } = {}) {
+  const srcPath = path.join(svgDir, `${svgName ?? name}.svg`);
   const raw = await readFile(srcPath, "utf8");
   const optimized = optimizeSvg(raw);
 
@@ -173,12 +173,16 @@ for (const icons of Object.values(tiers)) {
   }
 }
 await Promise.all(
-  [...allIcons.values()].map((i) => generateSvgPair(i.name, { opacity: i.opacity })),
+  [...allIcons.values()].map((i) =>
+    generateSvgPair(i.name, { opacity: i.opacity, svgName: i.svgName }),
+  ),
 );
 
 const coloredIcons = [...allIcons.values()].filter((i) => i.color);
 await Promise.all(
-  coloredIcons.map((i) => generateColoredSvg(i.name, i.color, { opacity: i.opacity })),
+  coloredIcons.map((i) =>
+    generateColoredSvg(i.name, i.color, { opacity: i.opacity, svgName: i.svgName }),
+  ),
 );
 
 const tierOptions = {
