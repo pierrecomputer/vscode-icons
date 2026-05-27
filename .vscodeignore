@@ -1,6 +1,8 @@
 .vscode/**
 .github/
 .gitignore
+extension.toml
+icon_themes/
 node_modules/
 package-lock.json
 scripts/

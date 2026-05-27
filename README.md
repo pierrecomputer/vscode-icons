@@ -1,6 +1,6 @@
-# Pierre Icons for VS Code
+# Pierre Icons
 
-File icon theme for VS Code with three tiers and per-icon palette colors.
+File icon theme for VS Code-compatible editors and Zed with three tiers and per-icon palette colors.
 
 ## Themes
 
@@ -25,7 +25,7 @@ Minimal and default tiers are monochrome (gray `400` / `800`). The complete tier
 npm run build
 ```
 
-This reads source SVGs from `svgs/`, optimizes them with SVGO, stamps dark/light fill colors, and writes the output to `icons/`. Three theme JSON files are generated: `theme-minimal.json`, `theme-default.json`, and `theme-complete.json`.
+This reads source SVGs from `svgs/`, optimizes them with SVGO, stamps dark/light fill colors, and writes the output to `icons/`. Three VS Code theme JSON files are generated: `theme-minimal.json`, `theme-default.json`, and `theme-complete.json`. The build also writes Zed icon theme JSON files to `icon_themes/`.
 
 For development, watch mode rebuilds on SVG changes:
 
@@ -41,6 +41,14 @@ npm run watch
 2. Run `npm run build`.
 3. Press `F5` to launch an Extension Development Host.
 4. Choose one of the Pierre Icons themes from **File Icon Theme**.
+
+### Run from source (Zed)
+
+1. Run `npm ci` if dependencies are not installed.
+2. Run `npm run build`.
+3. In Zed, run `zed: install dev extension`.
+4. Select this repository folder.
+5. Choose one of the Pierre Icons themes from the Icon Theme Selector.
 
 ### Package a VSIX
 

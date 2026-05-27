@@ -12,6 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 const iconOutputDir = path.join(rootDir, "icons");
+const zedThemeOutputDir = path.join(rootDir, "icon_themes");
 const svgDir = path.join(rootDir, "svgs");
 
 const tiers = {
@@ -160,11 +161,93 @@ function buildTheme(icons, { colored = false } = {}) {
   return theme;
 }
 
+function iconPath(name, { appearance, color, colored }) {
+  const mode = appearance === "light" ? "light" : "dark";
+
+  if (colored && color) {
+    return mode === "light" ? `./icons/${name}-color-light.svg` : `./icons/${name}-color.svg`;
+  }
+
+  return mode === "light" ? `./icons/${name}-light.svg` : `./icons/${name}.svg`;
+}
+
+function buildZedTheme(icons, { appearance, colored = false, themeName }) {
+  const fileIcons = {
+    default: {
+      path: iconPath("file-duo", { appearance, colored: false }),
+    },
+  };
+  const fileSuffixes = {};
+  const fileStems = {};
+  const namedDirectoryIcons = {};
+
+  for (const {
+    name,
+    color: iconColor,
+    fileExtensions: exts,
+    fileNames: names,
+    folderNames,
+  } of icons) {
+    const path = iconPath(name, { appearance, color: iconColor, colored });
+    fileIcons[name] = { path };
+
+    if (exts) {
+      for (const ext of exts) {
+        fileSuffixes[ext] = name;
+      }
+    }
+    if (names) {
+      for (const fn of names) {
+        fileStems[fn] = name;
+      }
+    }
+    if (folderNames) {
+      for (const folder of folderNames) {
+        namedDirectoryIcons[folder] = {
+          collapsed: path,
+          expanded: path,
+        };
+      }
+    }
+  }
+
+  const theme = {
+    name: themeName,
+    appearance,
+    directory_icons: {
+      collapsed: iconPath("folder-duo", { appearance, colored: false }),
+      expanded: iconPath("folder-open-duo", { appearance, colored: false }),
+    },
+    file_suffixes: fileSuffixes,
+    file_stems: fileStems,
+    file_icons: fileIcons,
+  };
+
+  if (Object.keys(namedDirectoryIcons).length > 0) {
+    theme.named_directory_icons = namedDirectoryIcons;
+  }
+
+  return theme;
+}
+
+function buildZedThemeFamily(icons, { themeName, colored = false }) {
+  return {
+    $schema: "https://zed.dev/schema/icon_themes/v0.3.0.json",
+    name: themeName,
+    author: "Pierre Computer",
+    themes: [
+      buildZedTheme(icons, { appearance: "dark", colored, themeName }),
+      buildZedTheme(icons, { appearance: "light", colored, themeName }),
+    ],
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Build
 // ---------------------------------------------------------------------------
 
 await mkdir(iconOutputDir, { recursive: true });
+await mkdir(zedThemeOutputDir, { recursive: true });
 
 const allIcons = new Map();
 for (const icons of Object.values(tiers)) {
@@ -191,9 +274,29 @@ const tierOptions = {
   complete: { colored: true },
 };
 
+const zedThemeNames = {
+  minimal: "Pierre Icons (Minimal)",
+  default: "Pierre Icons",
+  complete: "Pierre Icons (Complete)",
+};
+
+const zedThemeFiles = {
+  minimal: "pierre-icons-minimal",
+  default: "pierre-icons",
+  complete: "pierre-icons-complete",
+};
+
 for (const [name, icons] of Object.entries(tiers)) {
   const theme = buildTheme(icons, tierOptions[name]);
   const out = path.join(iconOutputDir, `theme-${name}.json`);
   await writeFile(out, `${JSON.stringify(theme, null, 2)}\n`);
   console.log(`Wrote ${path.relative(rootDir, out)}`);
+
+  const zedTheme = buildZedThemeFamily(icons, {
+    themeName: zedThemeNames[name],
+    ...tierOptions[name],
+  });
+  const zedOut = path.join(zedThemeOutputDir, `${zedThemeFiles[name]}.json`);
+  await writeFile(zedOut, `${JSON.stringify(zedTheme, null, 2)}\n`);
+  console.log(`Wrote ${path.relative(rootDir, zedOut)}`);
 }
