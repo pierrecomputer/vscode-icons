@@ -280,6 +280,18 @@ const tooling = [
     color: color(palette.blue),
     fileExtensions: ["code-workspace"],
   },
+  {
+    name: "vitest",
+    color: color(palette.green),
+    fileNames: [
+      "vitest.config.js",
+      "vitest.config.ts",
+      "vitest.config.cjs",
+      "vitest.config.cts",
+      "vitest.config.mjs",
+      "vitest.config.mts",
+    ],
+  },
 ];
 
 export default [...overrides, ...frameworks, ...languages, ...tooling];
