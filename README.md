@@ -7,7 +7,7 @@ File icon theme for VS Code with three tiers and per-icon palette colors.
 The extension ships three icon themes, each building on the last:
 
 - **Pierre Icons (Minimal)** -- file, folder, text, and image icons only. Monochrome.
-- **Pierre Icons** -- adds language icons (JS, TS, CSS, HTML, Python, Go, Rust, Ruby, Swift, Bash, Markdown) plus font, SVG, JSON, and git. Monochrome.
+- **Pierre Icons** -- adds language icons (JS, TS, CSS, HTML, Python, Go, Rust, Ruby, Elixir, Swift, Bash, Markdown) plus font, SVG, JSON, and git. Monochrome.
 - **Pierre Icons (Complete)** -- adds framework, tooling, and config icons (React, Vue, Svelte, Astro, Docker, Tailwind, ESLint, Prettier, npm, Vite, webpack, and more). Uses per-icon colors from the [Pierre palette](https://github.com/pierrecomputer/theme).
 
 ## Color system

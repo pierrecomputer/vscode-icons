@@ -76,6 +76,12 @@ export default [
     fileNames: ["Gemfile", "Rakefile"],
   },
   {
+    name: "lang-elixir",
+    color: color(palette.purple),
+    fileExtensions: ["ex", "exs", "heex", "eex"],
+    fileNames: ["mix.lock"],
+  },
+  {
     name: "file-symlink-duo",
   },
   {
