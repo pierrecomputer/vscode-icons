@@ -1,6 +1,7 @@
 node_modules/
 icons/
 icon_themes/
+preview/
 test/
 .DS_Store
 *.vsix

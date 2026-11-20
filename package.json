@@ -34,6 +34,7 @@
     "build": "npm run format:svgs && npm run format:check && npm run lint && node scripts/build-icon-theme.mjs",
     "watch": "node scripts/watch-svgs.mjs",
     "package": "npm run build && node scripts/package-vsix.mjs",
+    "preview": "npm run build && node scripts/build-preview.mjs",
     "lint": "oxlint scripts/",
     "format": "oxfmt scripts/",
     "format:check": "oxfmt --check scripts/",
