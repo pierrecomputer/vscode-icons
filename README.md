@@ -33,6 +33,16 @@ For development, watch mode rebuilds on SVG changes:
 npm run watch
 ```
 
+## Preview
+
+Generate a three-column gallery of every icon in each theme:
+
+```bash
+npm run preview
+```
+
+Then open `preview/index.html` in a browser.
+
 ## Load locally
 
 ### Run from source (VS Code)
