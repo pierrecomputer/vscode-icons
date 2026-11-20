@@ -12,6 +12,18 @@ export default [
     fileExtensions: ["ts", "cts", "mts", "tsx"],
   },
   {
+    name: "lang-javascript-test-duo",
+    svgName: "lang-javascript-duo",
+    color: color(palette.red),
+    fileExtensions: ["spec.js", "test.js", "spec.jsx", "test.jsx"],
+  },
+  {
+    name: "lang-typescript-test-duo",
+    svgName: "lang-typescript-duo",
+    color: color(palette.red),
+    fileExtensions: ["spec.ts", "test.ts", "spec.tsx", "test.tsx"],
+  },
+  {
     name: "lang-css-duo",
     color: color(palette.indigo),
     fileExtensions: ["css", "scss", "sass", "less", "postcss", "styl"],
