@@ -263,7 +263,16 @@ const tooling = [
   {
     name: "oxc",
     color: color(palette.cyan),
-    fileNames: [".oxlintrc.json"],
+    fileNames: [
+      ".oxlintrc.json",
+      ".oxlintrc.jsonc",
+      "oxlint.config.ts",
+      "oxlint.config.mts",
+      ".oxfmtrc.json",
+      ".oxfmtrc.jsonc",
+      "oxfmt.config.ts",
+      "oxfmt.config.mts",
+    ],
   },
   {
     name: "browserslist-duo",
