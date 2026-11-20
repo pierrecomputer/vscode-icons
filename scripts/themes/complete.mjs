@@ -79,9 +79,20 @@ const frameworks = [
 
 const languages = [
   {
+    name: "lang-elixir",
+    color: color(palette.purple),
+    fileExtensions: ["ex", "exs"],
+    fileNames: ["mix.lock"],
+  },
+  {
     name: "graphql",
     color: color(palette.pink),
     fileExtensions: ["graphql", "gql"],
+  },
+  {
+    name: "lang-kotlin",
+    color: color(palette.pink),
+    fileExtensions: ["kt", "kts"],
   },
   {
     name: "sass",
@@ -121,6 +132,18 @@ const tooling = [
     color: color(palette.red),
     opacity: 0.75,
     fileNames: ["package.json", "package-lock.json", ".npmrc", ".npmignore"],
+  },
+  {
+    name: "pnpm",
+    color: color(palette.orange),
+    fileNames: [
+      "pnpm-lock.yaml",
+      "pnpm-lock.yml",
+      "pnpm-workspace.yaml",
+      "pnpm-workspace.yml",
+      "pnpmfile.js",
+      "pnpmfile.cjs",
+    ],
   },
   {
     name: "eslint",
@@ -181,6 +204,22 @@ const tooling = [
     fileNames: ["vite.config.js", "vite.config.ts", "vite.config.mjs", "vite.config.mts"],
   },
   {
+    name: "vitest",
+    color: color(palette.green),
+    fileNames: [
+      "vitest.config.js",
+      "vitest.config.ts",
+      "vitest.config.mjs",
+      "vitest.config.mts",
+      "vitest.config.cjs",
+      "vitest.config.cts",
+      "vitest.workspace.js",
+      "vitest.workspace.ts",
+      "vitest.workspace.mjs",
+      "vitest.workspace.mts",
+    ],
+  },
+  {
     name: "svgo",
     color: color(palette.green),
     fileNames: ["svgo.config.js", "svgo.config.mjs", "svgo.config.cjs", "svgo.config.ts"],
@@ -233,6 +272,18 @@ const tooling = [
       "webpack.config.mjs",
       "webpack.config.cjs",
       "webpack.config.babel.js",
+    ],
+  },
+  {
+    name: "rolldown",
+    color: color(palette.vermilion),
+    fileNames: [
+      "rolldown.config.js",
+      "rolldown.config.ts",
+      "rolldown.config.mjs",
+      "rolldown.config.mts",
+      "rolldown.config.cjs",
+      "rolldown.config.cts",
     ],
   },
   {
