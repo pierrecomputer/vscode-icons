@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { optimize } from "svgo";
@@ -12,7 +12,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 const iconOutputDir = path.join(rootDir, "icons");
-const zedThemeOutputDir = path.join(rootDir, "icon_themes");
+const zedExtensionDir = path.join(rootDir, "zed");
+const zedIconOutputDir = path.join(zedExtensionDir, "icons");
+const zedThemeOutputDir = path.join(zedExtensionDir, "icon_themes");
 const svgDir = path.join(rootDir, "svgs");
 
 const tiers = {
@@ -46,8 +48,12 @@ async function generateSvgPair(name, { opacity, svgName } = {}) {
   const darkSvg = applyOpacity(optimized.replaceAll("currentColor", fill.dark), opacity);
   const lightSvg = applyOpacity(optimized.replaceAll("currentColor", fill.light), opacity);
 
-  await writeFile(path.join(iconOutputDir, `${name}.svg`), darkSvg);
-  await writeFile(path.join(iconOutputDir, `${name}-light.svg`), lightSvg);
+  await Promise.all([
+    writeFile(path.join(iconOutputDir, `${name}.svg`), darkSvg),
+    writeFile(path.join(iconOutputDir, `${name}-light.svg`), lightSvg),
+    writeFile(path.join(zedIconOutputDir, `${name}.svg`), darkSvg),
+    writeFile(path.join(zedIconOutputDir, `${name}-light.svg`), lightSvg),
+  ]);
 }
 
 async function generateColoredSvg(name, iconColor, { opacity, svgName } = {}) {
@@ -74,8 +80,12 @@ async function generateColoredSvg(name, iconColor, { opacity, svgName } = {}) {
   darkSvg = applyOpacity(darkSvg, opacity);
   lightSvg = applyOpacity(lightSvg, opacity);
 
-  await writeFile(path.join(iconOutputDir, `${name}-color.svg`), darkSvg);
-  await writeFile(path.join(iconOutputDir, `${name}-color-light.svg`), lightSvg);
+  await Promise.all([
+    writeFile(path.join(iconOutputDir, `${name}-color.svg`), darkSvg),
+    writeFile(path.join(iconOutputDir, `${name}-color-light.svg`), lightSvg),
+    writeFile(path.join(zedIconOutputDir, `${name}-color.svg`), darkSvg),
+    writeFile(path.join(zedIconOutputDir, `${name}-color-light.svg`), lightSvg),
+  ]);
 }
 
 // ---------------------------------------------------------------------------
@@ -236,8 +246,16 @@ function buildZedThemeFamily(icons, { themeName, colored = false }) {
     name: themeName,
     author: "Pierre Computer",
     themes: [
-      buildZedTheme(icons, { appearance: "dark", colored, themeName }),
-      buildZedTheme(icons, { appearance: "light", colored, themeName }),
+      buildZedTheme(icons, {
+        appearance: "dark",
+        colored,
+        themeName: `${themeName} — Dark`,
+      }),
+      buildZedTheme(icons, {
+        appearance: "light",
+        colored,
+        themeName: `${themeName} — Light`,
+      }),
     ],
   };
 }
@@ -246,7 +264,12 @@ function buildZedThemeFamily(icons, { themeName, colored = false }) {
 // Build
 // ---------------------------------------------------------------------------
 
+await Promise.all([
+  rm(zedIconOutputDir, { recursive: true, force: true }),
+  rm(zedThemeOutputDir, { recursive: true, force: true }),
+]);
 await mkdir(iconOutputDir, { recursive: true });
+await mkdir(zedIconOutputDir, { recursive: true });
 await mkdir(zedThemeOutputDir, { recursive: true });
 
 const allIcons = new Map();
@@ -286,6 +309,18 @@ const zedThemeFiles = {
   complete: "pierre-icons-complete",
 };
 
+const zedIconFiles = new Set();
+
+function collectZedIconFiles(value) {
+  if (typeof value === "string" && value.startsWith("./icons/")) {
+    zedIconFiles.add(path.basename(value));
+  } else if (Array.isArray(value)) {
+    value.forEach(collectZedIconFiles);
+  } else if (value && typeof value === "object") {
+    Object.values(value).forEach(collectZedIconFiles);
+  }
+}
+
 for (const [name, icons] of Object.entries(tiers)) {
   const theme = buildTheme(icons, tierOptions[name]);
   const out = path.join(iconOutputDir, `theme-${name}.json`);
@@ -298,5 +333,12 @@ for (const [name, icons] of Object.entries(tiers)) {
   });
   const zedOut = path.join(zedThemeOutputDir, `${zedThemeFiles[name]}.json`);
   await writeFile(zedOut, `${JSON.stringify(zedTheme, null, 2)}\n`);
+  collectZedIconFiles(zedTheme);
   console.log(`Wrote ${path.relative(rootDir, zedOut)}`);
 }
+
+await Promise.all(
+  (await readdir(zedIconOutputDir))
+    .filter((file) => !zedIconFiles.has(file))
+    .map((file) => rm(path.join(zedIconOutputDir, file))),
+);

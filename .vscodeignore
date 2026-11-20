@@ -1,8 +1,6 @@
 .vscode/**
 .github/
 .gitignore
-extension.toml
-icon_themes/
 node_modules/
 package-lock.json
 preview/
@@ -10,5 +8,6 @@ scripts/
 svgs/
 svgo.config.js
 test/
+zed/
 .oxfmtrc.json
 *.vsix

@@ -1,6 +1,5 @@
 node_modules/
-icons/
-icon_themes/
+/icons/
 preview/
 test/
 .DS_Store

@@ -31,7 +31,7 @@
     "icon-theme"
   ],
   "scripts": {
-    "build": "npm run format:svgs && npm run format:check && npm run lint && node scripts/build-icon-theme.mjs",
+    "build": "npm run format:svgs && npm run format:check && npm run lint && node scripts/build-icon-theme.mjs && npm run validate:zed",
     "watch": "node scripts/watch-svgs.mjs",
     "package": "npm run build && node scripts/package-vsix.mjs",
     "preview": "npm run build && node scripts/build-preview.mjs",
@@ -39,6 +39,7 @@
     "format": "oxfmt scripts/",
     "format:check": "oxfmt --check scripts/",
     "format:svgs": "node scripts/format-svgs.mjs",
+    "validate:zed": "node scripts/validate-zed-themes.mjs",
     "sizes": "node scripts/svg-sizes.mjs"
   },
   "contributes": {

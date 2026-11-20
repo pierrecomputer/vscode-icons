@@ -25,7 +25,9 @@ Minimal and default tiers are monochrome (gray `400` / `800`). The complete tier
 npm run build
 ```
 
-This reads source SVGs from `svgs/`, optimizes them with SVGO, stamps dark/light fill colors, and writes the output to `icons/`. Three VS Code theme JSON files are generated: `theme-minimal.json`, `theme-default.json`, and `theme-complete.json`. The build also writes Zed icon theme JSON files to `icon_themes/`.
+This reads source SVGs from `svgs/`, optimizes them with SVGO, stamps dark/light fill colors, and writes the VS Code output to `icons/`. Three VS Code theme JSON files are generated: `theme-minimal.json`, `theme-default.json`, and `theme-complete.json`.
+
+The build also updates the publishable Zed extension in `zed/`, including its committed SVG assets and icon theme JSON files. It validates every generated association and icon path.
 
 For development, watch mode rebuilds on SVG changes:
 
@@ -57,7 +59,7 @@ Then open `preview/index.html` in a browser.
 1. Run `npm ci` if dependencies are not installed.
 2. Run `npm run build`.
 3. In Zed, run `zed: install dev extension`.
-4. Select this repository folder.
+4. Select the `zed/` folder in this repository.
 5. Choose one of the Pierre Icons themes from the Icon Theme Selector.
 
 ### Package a VSIX
@@ -71,7 +73,7 @@ Then install the generated `.vsix` in VS Code or Cursor.
 ## Adding icons
 
 1. Add or update SVGs in `svgs/`. For duo-tone icons, use `class="bg"` and `class="fg"` on paths.
-2. Add an entry to the appropriate tier array in `scripts/build-icon-theme.mjs`:
+2. Add an entry to the appropriate file in `scripts/themes/`:
 
 ```js
 // Single color
