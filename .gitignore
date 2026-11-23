@@ -3,4 +3,5 @@ node_modules/
 preview/
 test/
 .DS_Store
+*.tgz
 *.vsix

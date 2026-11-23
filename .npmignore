@@ -1,0 +1,7 @@
+*
+!icons/
+!icons/**
+!LICENSE.md
+!README.md
+!icon.png
+!package.json

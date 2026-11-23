@@ -4,9 +4,71 @@ on:
   release:
     types: [published]
 
+concurrency:
+  group: publish-${{ github.event.release.tag_name }}
+  cancel-in-progress: false
+
 jobs:
   package:
-    name: Publish to VS Marketplace & Open VSX
+    name: Build release packages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Verify release version
+        id: version
+        run: |
+          version=$(node --print "require('./package.json').version")
+          if [ "v$version" != "${{ github.event.release.tag_name }}" ]; then
+            echo "Release tag ${{ github.event.release.tag_name }} does not match package version $version"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Package extension
+        run: npm run package
+
+      - name: Validate npm package
+        run: npm run validate:npm
+
+      - name: Pack npm package
+        run: npm pack
+
+      - name: Upload VSIX to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release upload "${{ github.event.release.tag_name }}"
+          "pierre-vscode-icons-${{ steps.version.outputs.version }}.vsix"
+          --clobber
+
+      - name: Upload release packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-packages
+          if-no-files-found: error
+          path: |
+            pierre-vscode-icons-${{ steps.version.outputs.version }}.vsix
+            pierre-vscode-icons-${{ steps.version.outputs.version }}.tgz
+
+  vscode-marketplace:
+    name: Publish to VS Marketplace
+    needs: package
     runs-on: ubuntu-latest
 
     steps:
@@ -22,41 +84,68 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build theme
-        run: npm run build
-
-      - name: Rename package for extension publishing
-        run: jq '.name = "pierre-vscode-icons"' package.json > tmp.json && mv tmp.json package.json
+      - name: Download release packages
+        uses: actions/download-artifact@v4
+        with:
+          name: release-packages
 
       - name: Publish to VS Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: npx @vscode/vsce publish --pat $VSCE_PAT
+        run: >-
+          npx vsce publish
+          --packagePath "pierre-vscode-icons-${{ needs.package.outputs.version }}.vsix"
+          --pat "$VSCE_PAT"
+
+  open-vsx:
+    name: Publish to Open VSX
+    needs: package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Download release packages
+        uses: actions/download-artifact@v4
+        with:
+          name: release-packages
 
       - name: Publish to Open VSX
         env:
           OVSX_PAT: ${{ secrets.OPEN_VSX_TOKEN }}
-        run: npx ovsx publish --pat $OVSX_PAT
+        run: >-
+          npx --yes ovsx@1.4.0 publish
+          "pierre-vscode-icons-${{ needs.package.outputs.version }}.vsix"
+          --pat "$OVSX_PAT"
 
   npm:
     name: Publish to npm
+    needs: package
     runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: '22'
-          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Download release packages
+        uses: actions/download-artifact@v4
+        with:
+          name: release-packages
 
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public --provenance
+        run: >-
+          npm publish
+          "pierre-vscode-icons-${{ needs.package.outputs.version }}.tgz"
+          --access public
+          --provenance
