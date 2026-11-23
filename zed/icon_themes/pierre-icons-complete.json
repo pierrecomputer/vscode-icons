@@ -1,0 +1,963 @@
+{
+  "$schema": "https://zed.dev/schema/icon_themes/v0.3.0.json",
+  "name": "Pierre Icons (Complete)",
+  "author": "Pierre Computer",
+  "themes": [
+    {
+      "name": "Pierre Icons (Complete) — Dark",
+      "appearance": "dark",
+      "directory_icons": {
+        "collapsed": "./icons/folder-duo.svg",
+        "expanded": "./icons/folder-open-duo.svg"
+      },
+      "file_suffixes": {
+        "txt": "file-text-duo",
+        "md": "lang-markdown",
+        "mdx": "lang-markdown",
+        "markdown": "lang-markdown",
+        "rst": "file-text-duo",
+        "rtf": "file-text-duo",
+        "log": "file-text-duo",
+        "csv": "file-table-duo",
+        "tsv": "file-table-duo",
+        "ini": "file-text-duo",
+        "cfg": "file-text-duo",
+        "conf": "file-text-duo",
+        "env": "file-text-duo",
+        "env.local": "file-text-duo",
+        "env.development": "file-text-duo",
+        "env.production": "file-text-duo",
+        "editorconfig": "file-text-duo",
+        "LICENSE": "file-text-duo",
+        "AUTHORS": "file-text-duo",
+        "CONTRIBUTORS": "file-text-duo",
+        "CHANGELOG": "file-text-duo",
+        "png": "image-duo",
+        "jpg": "image-duo",
+        "jpeg": "image-duo",
+        "gif": "image-duo",
+        "svg": "svg-2",
+        "webp": "image-duo",
+        "avif": "image-duo",
+        "ico": "image-duo",
+        "icns": "image-duo",
+        "bmp": "image-duo",
+        "tiff": "image-duo",
+        "tif": "image-duo",
+        "js": "lang-javascript-duo",
+        "cjs": "lang-javascript-duo",
+        "mjs": "lang-javascript-duo",
+        "jsx": "react",
+        "ts": "lang-typescript-duo",
+        "cts": "lang-typescript-duo",
+        "mts": "lang-typescript-duo",
+        "tsx": "react",
+        "spec.js": "lang-javascript-test-duo",
+        "test.js": "lang-javascript-test-duo",
+        "spec.jsx": "lang-javascript-test-duo",
+        "test.jsx": "lang-javascript-test-duo",
+        "spec.ts": "lang-typescript-test-duo",
+        "test.ts": "lang-typescript-test-duo",
+        "spec.tsx": "lang-typescript-test-duo",
+        "test.tsx": "lang-typescript-test-duo",
+        "css": "lang-css-duo",
+        "scss": "sass",
+        "sass": "sass",
+        "less": "lang-css-duo",
+        "postcss": "lang-css-duo",
+        "styl": "lang-css-duo",
+        "html": "lang-html-duo",
+        "htm": "lang-html-duo",
+        "xhtml": "lang-html-duo",
+        "swift": "lang-swift",
+        "rs": "lang-rust",
+        "go": "lang-go",
+        "c": "lang-c",
+        "h": "lang-c",
+        "cpp": "lang-cpp",
+        "cc": "lang-cpp",
+        "cxx": "lang-cpp",
+        "hpp": "lang-cpp",
+        "hh": "lang-cpp",
+        "hxx": "lang-cpp",
+        "inl": "lang-cpp",
+        "cs": "lang-csharp",
+        "m": "lang-objc",
+        "mm": "lang-objc",
+        "py": "lang-python",
+        "pyw": "lang-python",
+        "pyi": "lang-python",
+        "pyx": "lang-python",
+        "rb": "lang-ruby",
+        "erb": "lang-ruby",
+        "gemspec": "lang-ruby",
+        "rake": "lang-ruby",
+        "db": "server-duo",
+        "sql": "server-duo",
+        "sqlite": "server-duo",
+        "sqlite3": "server-duo",
+        "xls": "file-table-duo",
+        "xlsx": "file-table-duo",
+        "ods": "file-table-duo",
+        "zip": "file-zip-duo",
+        "tar": "file-zip-duo",
+        "gz": "file-zip-duo",
+        "tgz": "file-zip-duo",
+        "bz2": "file-zip-duo",
+        "xz": "file-zip-duo",
+        "7z": "file-zip-duo",
+        "rar": "file-zip-duo",
+        "jar": "file-zip-duo",
+        "war": "file-zip-duo",
+        "ttf": "font",
+        "otf": "font",
+        "woff": "font",
+        "woff2": "font",
+        "eot": "font",
+        "sh": "bash-duo",
+        "bash": "bash-duo",
+        "zsh": "bash-duo",
+        "fish": "bash-duo",
+        "ksh": "bash-duo",
+        "csh": "bash-duo",
+        "json": "braces",
+        "jsonc": "braces",
+        "json5": "braces",
+        "jsonl": "braces",
+        "astro": "astro",
+        "svelte": "svelte",
+        "vue": "vue",
+        "ex": "lang-elixir",
+        "exs": "lang-elixir",
+        "graphql": "graphql",
+        "gql": "graphql",
+        "kt": "lang-kotlin",
+        "kts": "lang-kotlin",
+        "tf": "terraform",
+        "tfvars": "terraform",
+        "tfstate": "terraform",
+        "wasm": "wasm-duo",
+        "wat": "wasm-duo",
+        "wast": "wasm-duo",
+        "yml": "yml",
+        "yaml": "yml",
+        "zig": "zig",
+        "code-workspace": "vscode"
+      },
+      "file_stems": {
+        "Gemfile": "lang-ruby",
+        "Rakefile": "lang-ruby",
+        ".bashrc": "bash-duo",
+        ".bash_profile": "bash-duo",
+        ".zshrc": "bash-duo",
+        ".zshenv": "bash-duo",
+        ".zprofile": "bash-duo",
+        ".gitignore": "git",
+        ".gitattributes": "git",
+        ".gitmodules": "git",
+        ".gitkeep": "git",
+        "bootstrap.min.css": "bootstrap-duo",
+        "bootstrap.css": "bootstrap-duo",
+        "bootstrap.min.js": "bootstrap-duo",
+        "bootstrap.js": "bootstrap-duo",
+        "bootstrap.bundle.min.js": "bootstrap-duo",
+        "bootstrap.bundle.js": "bootstrap-duo",
+        "mix.lock": "lang-elixir",
+        ".terraform.lock.hcl": "terraform",
+        "package.json": "npm",
+        "package-lock.json": "npm",
+        ".npmrc": "npm",
+        ".npmignore": "npm",
+        "pnpm-lock.yaml": "pnpm",
+        "pnpm-lock.yml": "pnpm",
+        "pnpm-workspace.yaml": "pnpm",
+        "pnpm-workspace.yml": "pnpm",
+        "pnpmfile.js": "pnpm",
+        "pnpmfile.cjs": "pnpm",
+        ".eslintrc": "eslint",
+        ".eslintrc.json": "eslint",
+        ".eslintrc.yml": "eslint",
+        ".eslintrc.yaml": "eslint",
+        ".eslintrc.js": "eslint",
+        ".eslintrc.cjs": "eslint",
+        "eslint.config.js": "eslint",
+        "eslint.config.mjs": "eslint",
+        "eslint.config.cjs": "eslint",
+        "eslint.config.ts": "eslint",
+        "eslint.config.mts": "eslint",
+        ".eslintignore": "eslint",
+        ".prettierrc": "prettier",
+        ".prettierrc.json": "prettier",
+        ".prettierrc.yml": "prettier",
+        ".prettierrc.yaml": "prettier",
+        ".prettierrc.js": "prettier",
+        ".prettierrc.cjs": "prettier",
+        ".prettierrc.mjs": "prettier",
+        ".prettierrc.toml": "prettier",
+        "prettier.config.js": "prettier",
+        "prettier.config.cjs": "prettier",
+        "prettier.config.mjs": "prettier",
+        ".prettierignore": "prettier",
+        ".stylelintrc": "stylelint",
+        ".stylelintrc.json": "stylelint",
+        ".stylelintrc.yml": "stylelint",
+        ".stylelintrc.yaml": "stylelint",
+        ".stylelintrc.js": "stylelint",
+        ".stylelintrc.cjs": "stylelint",
+        ".stylelintrc.mjs": "stylelint",
+        "stylelint.config.js": "stylelint",
+        "stylelint.config.cjs": "stylelint",
+        "stylelint.config.mjs": "stylelint",
+        ".stylelintignore": "stylelint",
+        "vite.config.js": "vite",
+        "vite.config.ts": "vite",
+        "vite.config.mjs": "vite",
+        "vite.config.mts": "vite",
+        "vitest.config.js": "vitest",
+        "vitest.config.ts": "vitest",
+        "vitest.config.mjs": "vitest",
+        "vitest.config.mts": "vitest",
+        "vitest.config.cjs": "vitest",
+        "vitest.config.cts": "vitest",
+        "vitest.workspace.js": "vitest",
+        "vitest.workspace.ts": "vitest",
+        "vitest.workspace.mjs": "vitest",
+        "vitest.workspace.mts": "vitest",
+        "svgo.config.js": "svgo",
+        "svgo.config.mjs": "svgo",
+        "svgo.config.cjs": "svgo",
+        "svgo.config.ts": "svgo",
+        ".babelrc": "babel",
+        ".babelrc.json": "babel",
+        "babel.config.js": "babel",
+        "babel.config.json": "babel",
+        "babel.config.cjs": "babel",
+        "babel.config.mjs": "babel",
+        "Dockerfile": "docker",
+        ".dockerignore": "docker",
+        "docker-compose.yml": "docker",
+        "docker-compose.yaml": "docker",
+        "docker-compose.override.yml": "docker",
+        "compose.yml": "docker",
+        "compose.yaml": "docker",
+        "tailwind.config.js": "tailwind",
+        "tailwind.config.ts": "tailwind",
+        "tailwind.config.mjs": "tailwind",
+        "tailwind.config.cjs": "tailwind",
+        "next.config.js": "nextjs",
+        "next.config.ts": "nextjs",
+        "next.config.mjs": "nextjs",
+        "next.config.mts": "nextjs",
+        "webpack.config.js": "webpack",
+        "webpack.config.ts": "webpack",
+        "webpack.config.mjs": "webpack",
+        "webpack.config.cjs": "webpack",
+        "webpack.config.babel.js": "webpack",
+        "rolldown.config.js": "rolldown",
+        "rolldown.config.ts": "rolldown",
+        "rolldown.config.mjs": "rolldown",
+        "rolldown.config.mts": "rolldown",
+        "rolldown.config.cjs": "rolldown",
+        "rolldown.config.cts": "rolldown",
+        "postcss.config.js": "postcss",
+        "postcss.config.cjs": "postcss",
+        "postcss.config.mjs": "postcss",
+        "postcss.config.ts": "postcss",
+        ".postcssrc": "postcss",
+        ".postcssrc.json": "postcss",
+        ".postcssrc.yml": "postcss",
+        ".postcssrc.yaml": "postcss",
+        "biome.json": "biome",
+        "biome.jsonc": "biome",
+        "bunfig.toml": "bun-duo",
+        "bun.lockb": "bun-duo",
+        "bun.lock": "bun-duo",
+        ".oxlintrc.json": "oxc",
+        ".oxlintrc.jsonc": "oxc",
+        "oxlint.config.ts": "oxc",
+        "oxlint.config.mts": "oxc",
+        ".oxfmtrc.json": "oxc",
+        ".oxfmtrc.jsonc": "oxc",
+        "oxfmt.config.ts": "oxc",
+        "oxfmt.config.mts": "oxc",
+        ".browserslistrc": "browserslist-duo",
+        "CLAUDE.md": "claude"
+      },
+      "file_icons": {
+        "default": {
+          "path": "./icons/file-duo.svg"
+        },
+        "file-duo": {
+          "path": "./icons/file-duo.svg"
+        },
+        "file-text-duo": {
+          "path": "./icons/file-text-duo.svg"
+        },
+        "image-duo": {
+          "path": "./icons/image-duo.svg"
+        },
+        "folder-duo": {
+          "path": "./icons/folder-duo.svg"
+        },
+        "folder-open-duo": {
+          "path": "./icons/folder-open-duo.svg"
+        },
+        "lang-javascript-duo": {
+          "path": "./icons/lang-javascript-duo-color.svg"
+        },
+        "lang-typescript-duo": {
+          "path": "./icons/lang-typescript-duo-color.svg"
+        },
+        "lang-javascript-test-duo": {
+          "path": "./icons/lang-javascript-test-duo-color.svg"
+        },
+        "lang-typescript-test-duo": {
+          "path": "./icons/lang-typescript-test-duo-color.svg"
+        },
+        "lang-css-duo": {
+          "path": "./icons/lang-css-duo-color.svg"
+        },
+        "lang-html-duo": {
+          "path": "./icons/lang-html-duo-color.svg"
+        },
+        "lang-markdown": {
+          "path": "./icons/lang-markdown.svg"
+        },
+        "lang-swift": {
+          "path": "./icons/lang-swift-color.svg"
+        },
+        "lang-rust": {
+          "path": "./icons/lang-rust-color.svg"
+        },
+        "lang-go": {
+          "path": "./icons/lang-go-color.svg"
+        },
+        "lang-c": {
+          "path": "./icons/lang-c-color.svg"
+        },
+        "lang-cpp": {
+          "path": "./icons/lang-cpp-color.svg"
+        },
+        "lang-csharp": {
+          "path": "./icons/lang-csharp-color.svg"
+        },
+        "lang-objc": {
+          "path": "./icons/lang-objc-color.svg"
+        },
+        "lang-python": {
+          "path": "./icons/lang-python-color.svg"
+        },
+        "lang-ruby": {
+          "path": "./icons/lang-ruby-color.svg"
+        },
+        "file-symlink-duo": {
+          "path": "./icons/file-symlink-duo.svg"
+        },
+        "server-duo": {
+          "path": "./icons/server-duo.svg"
+        },
+        "file-table-duo": {
+          "path": "./icons/file-table-duo.svg"
+        },
+        "file-zip-duo": {
+          "path": "./icons/file-zip-duo.svg"
+        },
+        "font": {
+          "path": "./icons/font.svg"
+        },
+        "bash-duo": {
+          "path": "./icons/bash-duo-color.svg"
+        },
+        "svg-2": {
+          "path": "./icons/svg-2-color.svg"
+        },
+        "braces": {
+          "path": "./icons/braces.svg"
+        },
+        "git": {
+          "path": "./icons/git-color.svg"
+        },
+        "astro": {
+          "path": "./icons/astro-color.svg"
+        },
+        "bootstrap-duo": {
+          "path": "./icons/bootstrap-duo-color.svg"
+        },
+        "react": {
+          "path": "./icons/react-color.svg"
+        },
+        "svelte": {
+          "path": "./icons/svelte-color.svg"
+        },
+        "vue": {
+          "path": "./icons/vue-color.svg"
+        },
+        "lang-elixir": {
+          "path": "./icons/lang-elixir-color.svg"
+        },
+        "graphql": {
+          "path": "./icons/graphql-color.svg"
+        },
+        "lang-kotlin": {
+          "path": "./icons/lang-kotlin-color.svg"
+        },
+        "sass": {
+          "path": "./icons/sass-color.svg"
+        },
+        "terraform": {
+          "path": "./icons/terraform-color.svg"
+        },
+        "wasm-duo": {
+          "path": "./icons/wasm-duo-color.svg"
+        },
+        "yml": {
+          "path": "./icons/yml-color.svg"
+        },
+        "zig": {
+          "path": "./icons/zig-color.svg"
+        },
+        "npm": {
+          "path": "./icons/npm-color.svg"
+        },
+        "pnpm": {
+          "path": "./icons/pnpm-color.svg"
+        },
+        "eslint": {
+          "path": "./icons/eslint-color.svg"
+        },
+        "prettier": {
+          "path": "./icons/prettier-color.svg"
+        },
+        "stylelint": {
+          "path": "./icons/stylelint.svg"
+        },
+        "vite": {
+          "path": "./icons/vite-color.svg"
+        },
+        "vitest": {
+          "path": "./icons/vitest-color.svg"
+        },
+        "svgo": {
+          "path": "./icons/svgo-color.svg"
+        },
+        "babel": {
+          "path": "./icons/babel-color.svg"
+        },
+        "docker": {
+          "path": "./icons/docker-color.svg"
+        },
+        "tailwind": {
+          "path": "./icons/tailwind-color.svg"
+        },
+        "nextjs": {
+          "path": "./icons/nextjs.svg"
+        },
+        "webpack": {
+          "path": "./icons/webpack-color.svg"
+        },
+        "rolldown": {
+          "path": "./icons/rolldown-color.svg"
+        },
+        "postcss": {
+          "path": "./icons/postcss-color.svg"
+        },
+        "biome": {
+          "path": "./icons/biome-color.svg"
+        },
+        "bun-duo": {
+          "path": "./icons/bun-duo-color.svg"
+        },
+        "oxc": {
+          "path": "./icons/oxc-color.svg"
+        },
+        "browserslist-duo": {
+          "path": "./icons/browserslist-duo-color.svg"
+        },
+        "claude": {
+          "path": "./icons/claude-color.svg"
+        },
+        "vscode": {
+          "path": "./icons/vscode-color.svg"
+        }
+      }
+    },
+    {
+      "name": "Pierre Icons (Complete) — Light",
+      "appearance": "light",
+      "directory_icons": {
+        "collapsed": "./icons/folder-duo-light.svg",
+        "expanded": "./icons/folder-open-duo-light.svg"
+      },
+      "file_suffixes": {
+        "txt": "file-text-duo",
+        "md": "lang-markdown",
+        "mdx": "lang-markdown",
+        "markdown": "lang-markdown",
+        "rst": "file-text-duo",
+        "rtf": "file-text-duo",
+        "log": "file-text-duo",
+        "csv": "file-table-duo",
+        "tsv": "file-table-duo",
+        "ini": "file-text-duo",
+        "cfg": "file-text-duo",
+        "conf": "file-text-duo",
+        "env": "file-text-duo",
+        "env.local": "file-text-duo",
+        "env.development": "file-text-duo",
+        "env.production": "file-text-duo",
+        "editorconfig": "file-text-duo",
+        "LICENSE": "file-text-duo",
+        "AUTHORS": "file-text-duo",
+        "CONTRIBUTORS": "file-text-duo",
+        "CHANGELOG": "file-text-duo",
+        "png": "image-duo",
+        "jpg": "image-duo",
+        "jpeg": "image-duo",
+        "gif": "image-duo",
+        "svg": "svg-2",
+        "webp": "image-duo",
+        "avif": "image-duo",
+        "ico": "image-duo",
+        "icns": "image-duo",
+        "bmp": "image-duo",
+        "tiff": "image-duo",
+        "tif": "image-duo",
+        "js": "lang-javascript-duo",
+        "cjs": "lang-javascript-duo",
+        "mjs": "lang-javascript-duo",
+        "jsx": "react",
+        "ts": "lang-typescript-duo",
+        "cts": "lang-typescript-duo",
+        "mts": "lang-typescript-duo",
+        "tsx": "react",
+        "spec.js": "lang-javascript-test-duo",
+        "test.js": "lang-javascript-test-duo",
+        "spec.jsx": "lang-javascript-test-duo",
+        "test.jsx": "lang-javascript-test-duo",
+        "spec.ts": "lang-typescript-test-duo",
+        "test.ts": "lang-typescript-test-duo",
+        "spec.tsx": "lang-typescript-test-duo",
+        "test.tsx": "lang-typescript-test-duo",
+        "css": "lang-css-duo",
+        "scss": "sass",
+        "sass": "sass",
+        "less": "lang-css-duo",
+        "postcss": "lang-css-duo",
+        "styl": "lang-css-duo",
+        "html": "lang-html-duo",
+        "htm": "lang-html-duo",
+        "xhtml": "lang-html-duo",
+        "swift": "lang-swift",
+        "rs": "lang-rust",
+        "go": "lang-go",
+        "c": "lang-c",
+        "h": "lang-c",
+        "cpp": "lang-cpp",
+        "cc": "lang-cpp",
+        "cxx": "lang-cpp",
+        "hpp": "lang-cpp",
+        "hh": "lang-cpp",
+        "hxx": "lang-cpp",
+        "inl": "lang-cpp",
+        "cs": "lang-csharp",
+        "m": "lang-objc",
+        "mm": "lang-objc",
+        "py": "lang-python",
+        "pyw": "lang-python",
+        "pyi": "lang-python",
+        "pyx": "lang-python",
+        "rb": "lang-ruby",
+        "erb": "lang-ruby",
+        "gemspec": "lang-ruby",
+        "rake": "lang-ruby",
+        "db": "server-duo",
+        "sql": "server-duo",
+        "sqlite": "server-duo",
+        "sqlite3": "server-duo",
+        "xls": "file-table-duo",
+        "xlsx": "file-table-duo",
+        "ods": "file-table-duo",
+        "zip": "file-zip-duo",
+        "tar": "file-zip-duo",
+        "gz": "file-zip-duo",
+        "tgz": "file-zip-duo",
+        "bz2": "file-zip-duo",
+        "xz": "file-zip-duo",
+        "7z": "file-zip-duo",
+        "rar": "file-zip-duo",
+        "jar": "file-zip-duo",
+        "war": "file-zip-duo",
+        "ttf": "font",
+        "otf": "font",
+        "woff": "font",
+        "woff2": "font",
+        "eot": "font",
+        "sh": "bash-duo",
+        "bash": "bash-duo",
+        "zsh": "bash-duo",
+        "fish": "bash-duo",
+        "ksh": "bash-duo",
+        "csh": "bash-duo",
+        "json": "braces",
+        "jsonc": "braces",
+        "json5": "braces",
+        "jsonl": "braces",
+        "astro": "astro",
+        "svelte": "svelte",
+        "vue": "vue",
+        "ex": "lang-elixir",
+        "exs": "lang-elixir",
+        "graphql": "graphql",
+        "gql": "graphql",
+        "kt": "lang-kotlin",
+        "kts": "lang-kotlin",
+        "tf": "terraform",
+        "tfvars": "terraform",
+        "tfstate": "terraform",
+        "wasm": "wasm-duo",
+        "wat": "wasm-duo",
+        "wast": "wasm-duo",
+        "yml": "yml",
+        "yaml": "yml",
+        "zig": "zig",
+        "code-workspace": "vscode"
+      },
+      "file_stems": {
+        "Gemfile": "lang-ruby",
+        "Rakefile": "lang-ruby",
+        ".bashrc": "bash-duo",
+        ".bash_profile": "bash-duo",
+        ".zshrc": "bash-duo",
+        ".zshenv": "bash-duo",
+        ".zprofile": "bash-duo",
+        ".gitignore": "git",
+        ".gitattributes": "git",
+        ".gitmodules": "git",
+        ".gitkeep": "git",
+        "bootstrap.min.css": "bootstrap-duo",
+        "bootstrap.css": "bootstrap-duo",
+        "bootstrap.min.js": "bootstrap-duo",
+        "bootstrap.js": "bootstrap-duo",
+        "bootstrap.bundle.min.js": "bootstrap-duo",
+        "bootstrap.bundle.js": "bootstrap-duo",
+        "mix.lock": "lang-elixir",
+        ".terraform.lock.hcl": "terraform",
+        "package.json": "npm",
+        "package-lock.json": "npm",
+        ".npmrc": "npm",
+        ".npmignore": "npm",
+        "pnpm-lock.yaml": "pnpm",
+        "pnpm-lock.yml": "pnpm",
+        "pnpm-workspace.yaml": "pnpm",
+        "pnpm-workspace.yml": "pnpm",
+        "pnpmfile.js": "pnpm",
+        "pnpmfile.cjs": "pnpm",
+        ".eslintrc": "eslint",
+        ".eslintrc.json": "eslint",
+        ".eslintrc.yml": "eslint",
+        ".eslintrc.yaml": "eslint",
+        ".eslintrc.js": "eslint",
+        ".eslintrc.cjs": "eslint",
+        "eslint.config.js": "eslint",
+        "eslint.config.mjs": "eslint",
+        "eslint.config.cjs": "eslint",
+        "eslint.config.ts": "eslint",
+        "eslint.config.mts": "eslint",
+        ".eslintignore": "eslint",
+        ".prettierrc": "prettier",
+        ".prettierrc.json": "prettier",
+        ".prettierrc.yml": "prettier",
+        ".prettierrc.yaml": "prettier",
+        ".prettierrc.js": "prettier",
+        ".prettierrc.cjs": "prettier",
+        ".prettierrc.mjs": "prettier",
+        ".prettierrc.toml": "prettier",
+        "prettier.config.js": "prettier",
+        "prettier.config.cjs": "prettier",
+        "prettier.config.mjs": "prettier",
+        ".prettierignore": "prettier",
+        ".stylelintrc": "stylelint",
+        ".stylelintrc.json": "stylelint",
+        ".stylelintrc.yml": "stylelint",
+        ".stylelintrc.yaml": "stylelint",
+        ".stylelintrc.js": "stylelint",
+        ".stylelintrc.cjs": "stylelint",
+        ".stylelintrc.mjs": "stylelint",
+        "stylelint.config.js": "stylelint",
+        "stylelint.config.cjs": "stylelint",
+        "stylelint.config.mjs": "stylelint",
+        ".stylelintignore": "stylelint",
+        "vite.config.js": "vite",
+        "vite.config.ts": "vite",
+        "vite.config.mjs": "vite",
+        "vite.config.mts": "vite",
+        "vitest.config.js": "vitest",
+        "vitest.config.ts": "vitest",
+        "vitest.config.mjs": "vitest",
+        "vitest.config.mts": "vitest",
+        "vitest.config.cjs": "vitest",
+        "vitest.config.cts": "vitest",
+        "vitest.workspace.js": "vitest",
+        "vitest.workspace.ts": "vitest",
+        "vitest.workspace.mjs": "vitest",
+        "vitest.workspace.mts": "vitest",
+        "svgo.config.js": "svgo",
+        "svgo.config.mjs": "svgo",
+        "svgo.config.cjs": "svgo",
+        "svgo.config.ts": "svgo",
+        ".babelrc": "babel",
+        ".babelrc.json": "babel",
+        "babel.config.js": "babel",
+        "babel.config.json": "babel",
+        "babel.config.cjs": "babel",
+        "babel.config.mjs": "babel",
+        "Dockerfile": "docker",
+        ".dockerignore": "docker",
+        "docker-compose.yml": "docker",
+        "docker-compose.yaml": "docker",
+        "docker-compose.override.yml": "docker",
+        "compose.yml": "docker",
+        "compose.yaml": "docker",
+        "tailwind.config.js": "tailwind",
+        "tailwind.config.ts": "tailwind",
+        "tailwind.config.mjs": "tailwind",
+        "tailwind.config.cjs": "tailwind",
+        "next.config.js": "nextjs",
+        "next.config.ts": "nextjs",
+        "next.config.mjs": "nextjs",
+        "next.config.mts": "nextjs",
+        "webpack.config.js": "webpack",
+        "webpack.config.ts": "webpack",
+        "webpack.config.mjs": "webpack",
+        "webpack.config.cjs": "webpack",
+        "webpack.config.babel.js": "webpack",
+        "rolldown.config.js": "rolldown",
+        "rolldown.config.ts": "rolldown",
+        "rolldown.config.mjs": "rolldown",
+        "rolldown.config.mts": "rolldown",
+        "rolldown.config.cjs": "rolldown",
+        "rolldown.config.cts": "rolldown",
+        "postcss.config.js": "postcss",
+        "postcss.config.cjs": "postcss",
+        "postcss.config.mjs": "postcss",
+        "postcss.config.ts": "postcss",
+        ".postcssrc": "postcss",
+        ".postcssrc.json": "postcss",
+        ".postcssrc.yml": "postcss",
+        ".postcssrc.yaml": "postcss",
+        "biome.json": "biome",
+        "biome.jsonc": "biome",
+        "bunfig.toml": "bun-duo",
+        "bun.lockb": "bun-duo",
+        "bun.lock": "bun-duo",
+        ".oxlintrc.json": "oxc",
+        ".oxlintrc.jsonc": "oxc",
+        "oxlint.config.ts": "oxc",
+        "oxlint.config.mts": "oxc",
+        ".oxfmtrc.json": "oxc",
+        ".oxfmtrc.jsonc": "oxc",
+        "oxfmt.config.ts": "oxc",
+        "oxfmt.config.mts": "oxc",
+        ".browserslistrc": "browserslist-duo",
+        "CLAUDE.md": "claude"
+      },
+      "file_icons": {
+        "default": {
+          "path": "./icons/file-duo-light.svg"
+        },
+        "file-duo": {
+          "path": "./icons/file-duo-light.svg"
+        },
+        "file-text-duo": {
+          "path": "./icons/file-text-duo-light.svg"
+        },
+        "image-duo": {
+          "path": "./icons/image-duo-light.svg"
+        },
+        "folder-duo": {
+          "path": "./icons/folder-duo-light.svg"
+        },
+        "folder-open-duo": {
+          "path": "./icons/folder-open-duo-light.svg"
+        },
+        "lang-javascript-duo": {
+          "path": "./icons/lang-javascript-duo-color-light.svg"
+        },
+        "lang-typescript-duo": {
+          "path": "./icons/lang-typescript-duo-color-light.svg"
+        },
+        "lang-javascript-test-duo": {
+          "path": "./icons/lang-javascript-test-duo-color-light.svg"
+        },
+        "lang-typescript-test-duo": {
+          "path": "./icons/lang-typescript-test-duo-color-light.svg"
+        },
+        "lang-css-duo": {
+          "path": "./icons/lang-css-duo-color-light.svg"
+        },
+        "lang-html-duo": {
+          "path": "./icons/lang-html-duo-color-light.svg"
+        },
+        "lang-markdown": {
+          "path": "./icons/lang-markdown-light.svg"
+        },
+        "lang-swift": {
+          "path": "./icons/lang-swift-color-light.svg"
+        },
+        "lang-rust": {
+          "path": "./icons/lang-rust-color-light.svg"
+        },
+        "lang-go": {
+          "path": "./icons/lang-go-color-light.svg"
+        },
+        "lang-c": {
+          "path": "./icons/lang-c-color-light.svg"
+        },
+        "lang-cpp": {
+          "path": "./icons/lang-cpp-color-light.svg"
+        },
+        "lang-csharp": {
+          "path": "./icons/lang-csharp-color-light.svg"
+        },
+        "lang-objc": {
+          "path": "./icons/lang-objc-color-light.svg"
+        },
+        "lang-python": {
+          "path": "./icons/lang-python-color-light.svg"
+        },
+        "lang-ruby": {
+          "path": "./icons/lang-ruby-color-light.svg"
+        },
+        "file-symlink-duo": {
+          "path": "./icons/file-symlink-duo-light.svg"
+        },
+        "server-duo": {
+          "path": "./icons/server-duo-light.svg"
+        },
+        "file-table-duo": {
+          "path": "./icons/file-table-duo-light.svg"
+        },
+        "file-zip-duo": {
+          "path": "./icons/file-zip-duo-light.svg"
+        },
+        "font": {
+          "path": "./icons/font-light.svg"
+        },
+        "bash-duo": {
+          "path": "./icons/bash-duo-color-light.svg"
+        },
+        "svg-2": {
+          "path": "./icons/svg-2-color-light.svg"
+        },
+        "braces": {
+          "path": "./icons/braces-light.svg"
+        },
+        "git": {
+          "path": "./icons/git-color-light.svg"
+        },
+        "astro": {
+          "path": "./icons/astro-color-light.svg"
+        },
+        "bootstrap-duo": {
+          "path": "./icons/bootstrap-duo-color-light.svg"
+        },
+        "react": {
+          "path": "./icons/react-color-light.svg"
+        },
+        "svelte": {
+          "path": "./icons/svelte-color-light.svg"
+        },
+        "vue": {
+          "path": "./icons/vue-color-light.svg"
+        },
+        "lang-elixir": {
+          "path": "./icons/lang-elixir-color-light.svg"
+        },
+        "graphql": {
+          "path": "./icons/graphql-color-light.svg"
+        },
+        "lang-kotlin": {
+          "path": "./icons/lang-kotlin-color-light.svg"
+        },
+        "sass": {
+          "path": "./icons/sass-color-light.svg"
+        },
+        "terraform": {
+          "path": "./icons/terraform-color-light.svg"
+        },
+        "wasm-duo": {
+          "path": "./icons/wasm-duo-color-light.svg"
+        },
+        "yml": {
+          "path": "./icons/yml-color-light.svg"
+        },
+        "zig": {
+          "path": "./icons/zig-color-light.svg"
+        },
+        "npm": {
+          "path": "./icons/npm-color-light.svg"
+        },
+        "pnpm": {
+          "path": "./icons/pnpm-color-light.svg"
+        },
+        "eslint": {
+          "path": "./icons/eslint-color-light.svg"
+        },
+        "prettier": {
+          "path": "./icons/prettier-color-light.svg"
+        },
+        "stylelint": {
+          "path": "./icons/stylelint-light.svg"
+        },
+        "vite": {
+          "path": "./icons/vite-color-light.svg"
+        },
+        "vitest": {
+          "path": "./icons/vitest-color-light.svg"
+        },
+        "svgo": {
+          "path": "./icons/svgo-color-light.svg"
+        },
+        "babel": {
+          "path": "./icons/babel-color-light.svg"
+        },
+        "docker": {
+          "path": "./icons/docker-color-light.svg"
+        },
+        "tailwind": {
+          "path": "./icons/tailwind-color-light.svg"
+        },
+        "nextjs": {
+          "path": "./icons/nextjs-light.svg"
+        },
+        "webpack": {
+          "path": "./icons/webpack-color-light.svg"
+        },
+        "rolldown": {
+          "path": "./icons/rolldown-color-light.svg"
+        },
+        "postcss": {
+          "path": "./icons/postcss-color-light.svg"
+        },
+        "biome": {
+          "path": "./icons/biome-color-light.svg"
+        },
+        "bun-duo": {
+          "path": "./icons/bun-duo-color-light.svg"
+        },
+        "oxc": {
+          "path": "./icons/oxc-color-light.svg"
+        },
+        "browserslist-duo": {
+          "path": "./icons/browserslist-duo-color-light.svg"
+        },
+        "claude": {
+          "path": "./icons/claude-color-light.svg"
+        },
+        "vscode": {
+          "path": "./icons/vscode-color-light.svg"
+        }
+      }
+    }
+  ]
+}

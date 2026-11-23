@@ -3,9 +3,11 @@
 .gitignore
 node_modules/
 package-lock.json
+preview/
 scripts/
 svgs/
 svgo.config.js
 test/
+zed/
 .oxfmtrc.json
 *.vsix

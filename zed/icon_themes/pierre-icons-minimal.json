@@ -1,0 +1,135 @@
+{
+  "$schema": "https://zed.dev/schema/icon_themes/v0.3.0.json",
+  "name": "Pierre Icons (Minimal)",
+  "author": "Pierre Computer",
+  "themes": [
+    {
+      "name": "Pierre Icons (Minimal) — Dark",
+      "appearance": "dark",
+      "directory_icons": {
+        "collapsed": "./icons/folder-duo.svg",
+        "expanded": "./icons/folder-open-duo.svg"
+      },
+      "file_suffixes": {
+        "txt": "file-text-duo",
+        "md": "file-text-duo",
+        "mdx": "file-text-duo",
+        "markdown": "file-text-duo",
+        "rst": "file-text-duo",
+        "rtf": "file-text-duo",
+        "log": "file-text-duo",
+        "csv": "file-text-duo",
+        "tsv": "file-text-duo",
+        "ini": "file-text-duo",
+        "cfg": "file-text-duo",
+        "conf": "file-text-duo",
+        "env": "file-text-duo",
+        "env.local": "file-text-duo",
+        "env.development": "file-text-duo",
+        "env.production": "file-text-duo",
+        "editorconfig": "file-text-duo",
+        "LICENSE": "file-text-duo",
+        "AUTHORS": "file-text-duo",
+        "CONTRIBUTORS": "file-text-duo",
+        "CHANGELOG": "file-text-duo",
+        "png": "image-duo",
+        "jpg": "image-duo",
+        "jpeg": "image-duo",
+        "gif": "image-duo",
+        "svg": "image-duo",
+        "webp": "image-duo",
+        "avif": "image-duo",
+        "ico": "image-duo",
+        "icns": "image-duo",
+        "bmp": "image-duo",
+        "tiff": "image-duo",
+        "tif": "image-duo"
+      },
+      "file_stems": {},
+      "file_icons": {
+        "default": {
+          "path": "./icons/file-duo.svg"
+        },
+        "file-duo": {
+          "path": "./icons/file-duo.svg"
+        },
+        "file-text-duo": {
+          "path": "./icons/file-text-duo.svg"
+        },
+        "image-duo": {
+          "path": "./icons/image-duo.svg"
+        },
+        "folder-duo": {
+          "path": "./icons/folder-duo.svg"
+        },
+        "folder-open-duo": {
+          "path": "./icons/folder-open-duo.svg"
+        }
+      }
+    },
+    {
+      "name": "Pierre Icons (Minimal) — Light",
+      "appearance": "light",
+      "directory_icons": {
+        "collapsed": "./icons/folder-duo-light.svg",
+        "expanded": "./icons/folder-open-duo-light.svg"
+      },
+      "file_suffixes": {
+        "txt": "file-text-duo",
+        "md": "file-text-duo",
+        "mdx": "file-text-duo",
+        "markdown": "file-text-duo",
+        "rst": "file-text-duo",
+        "rtf": "file-text-duo",
+        "log": "file-text-duo",
+        "csv": "file-text-duo",
+        "tsv": "file-text-duo",
+        "ini": "file-text-duo",
+        "cfg": "file-text-duo",
+        "conf": "file-text-duo",
+        "env": "file-text-duo",
+        "env.local": "file-text-duo",
+        "env.development": "file-text-duo",
+        "env.production": "file-text-duo",
+        "editorconfig": "file-text-duo",
+        "LICENSE": "file-text-duo",
+        "AUTHORS": "file-text-duo",
+        "CONTRIBUTORS": "file-text-duo",
+        "CHANGELOG": "file-text-duo",
+        "png": "image-duo",
+        "jpg": "image-duo",
+        "jpeg": "image-duo",
+        "gif": "image-duo",
+        "svg": "image-duo",
+        "webp": "image-duo",
+        "avif": "image-duo",
+        "ico": "image-duo",
+        "icns": "image-duo",
+        "bmp": "image-duo",
+        "tiff": "image-duo",
+        "tif": "image-duo"
+      },
+      "file_stems": {},
+      "file_icons": {
+        "default": {
+          "path": "./icons/file-duo-light.svg"
+        },
+        "file-duo": {
+          "path": "./icons/file-duo-light.svg"
+        },
+        "file-text-duo": {
+          "path": "./icons/file-text-duo-light.svg"
+        },
+        "image-duo": {
+          "path": "./icons/image-duo-light.svg"
+        },
+        "folder-duo": {
+          "path": "./icons/folder-duo-light.svg"
+        },
+        "folder-open-duo": {
+          "path": "./icons/folder-open-duo-light.svg"
+        }
+      }
+    }
+  ]
+}
