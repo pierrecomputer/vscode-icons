@@ -1,6 +1,6 @@
 id = "pierre-icons"
 name = "Pierre Icons"
-version = "0.0.9"
+version = "0.0.10"
 schema_version = 1
 authors = ["Pierre Computer Company <support@pierre.co>"]
 description = "Minimal, default, and complete file icon themes from Pierre."
