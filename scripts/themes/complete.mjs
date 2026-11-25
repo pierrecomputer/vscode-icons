@@ -250,6 +250,9 @@ const tooling = [
     ],
   },
   {
+    name: "docker-new",
+  },
+  {
     name: "tailwind",
     color: color(palette.cyan),
     fileNames: [
@@ -334,6 +337,50 @@ const tooling = [
     name: "claude",
     color: color(palette.orange),
     fileNames: ["CLAUDE.md"],
+  },
+  {
+    name: "nuxt",
+    color: color(palette.green),
+    fileNames: ["nuxt.config.js", "nuxt.config.ts", "nuxt.config.mjs", "nuxt.config.mts"],
+  },
+  {
+    name: "vercel",
+    fileNames: ["vercel.json", "vercel.ts", "vercel.toml", ".vercelignore"],
+  },
+  {
+    name: "agents",
+    fileNames: ["AGENTS.md", "AGENTS.override.md"],
+  },
+  {
+    name: "mise",
+    fileNames: [
+      "mise.toml",
+      ".mise.toml",
+      "mise.local.toml",
+      ".mise.local.toml",
+      "mise.lock",
+      "mise.local.lock",
+    ],
+  },
+  {
+    name: "prisma",
+    fileExtensions: ["prisma"],
+    fileNames: [
+      "prisma.config.ts",
+      "prisma.config.js",
+      "prisma.config.mts",
+      "prisma.config.mjs",
+      "prisma.config.cts",
+      "prisma.config.cjs",
+    ],
+  },
+  {
+    name: "prisma-new",
+  },
+  {
+    name: "drizzle",
+    color: color(palette.green),
+    fileNames: ["drizzle.config.ts", "drizzle.config.js"],
   },
   {
     name: "vscode",
