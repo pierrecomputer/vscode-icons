@@ -363,6 +363,21 @@ const tooling = [
     ],
   },
   {
+    name: "prisma",
+    fileExtensions: ["prisma"],
+    fileNames: [
+      "prisma.config.ts",
+      "prisma.config.js",
+      "prisma.config.mts",
+      "prisma.config.mjs",
+      "prisma.config.cts",
+      "prisma.config.cjs",
+    ],
+  },
+  {
+    name: "prisma-new",
+  },
+  {
     name: "drizzle",
     color: color(palette.green),
     fileNames: ["drizzle.config.ts", "drizzle.config.js"],

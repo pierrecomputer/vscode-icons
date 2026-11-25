@@ -142,6 +142,7 @@
         "yml": "yml",
         "yaml": "yml",
         "zig": "zig",
+        "prisma": "prisma",
         "code-workspace": "vscode"
       },
       "file_stems": {
@@ -298,6 +299,12 @@
         ".mise.local.toml": "mise",
         "mise.lock": "mise",
         "mise.local.lock": "mise",
+        "prisma.config.ts": "prisma",
+        "prisma.config.js": "prisma",
+        "prisma.config.mts": "prisma",
+        "prisma.config.mjs": "prisma",
+        "prisma.config.cts": "prisma",
+        "prisma.config.cjs": "prisma",
         "drizzle.config.ts": "drizzle",
         "drizzle.config.js": "drizzle"
       },
@@ -509,6 +516,12 @@
         "mise": {
           "path": "./icons/mise.svg"
         },
+        "prisma": {
+          "path": "./icons/prisma.svg"
+        },
+        "prisma-new": {
+          "path": "./icons/prisma-new.svg"
+        },
         "drizzle": {
           "path": "./icons/drizzle-color.svg"
         },
@@ -656,6 +669,7 @@
         "yml": "yml",
         "yaml": "yml",
         "zig": "zig",
+        "prisma": "prisma",
         "code-workspace": "vscode"
       },
       "file_stems": {
@@ -812,6 +826,12 @@
         ".mise.local.toml": "mise",
         "mise.lock": "mise",
         "mise.local.lock": "mise",
+        "prisma.config.ts": "prisma",
+        "prisma.config.js": "prisma",
+        "prisma.config.mts": "prisma",
+        "prisma.config.mjs": "prisma",
+        "prisma.config.cts": "prisma",
+        "prisma.config.cjs": "prisma",
         "drizzle.config.ts": "drizzle",
         "drizzle.config.js": "drizzle"
       },
@@ -1022,6 +1042,12 @@
         },
         "mise": {
           "path": "./icons/mise-light.svg"
+        },
+        "prisma": {
+          "path": "./icons/prisma-light.svg"
+        },
+        "prisma-new": {
+          "path": "./icons/prisma-new-light.svg"
         },
         "drizzle": {
           "path": "./icons/drizzle-color-light.svg"
