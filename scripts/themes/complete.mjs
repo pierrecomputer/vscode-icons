@@ -345,6 +345,17 @@ const tooling = [
     fileNames: ["vercel.json", "vercel.ts", "vercel.toml", ".vercelignore"],
   },
   {
+    name: "mise",
+    fileNames: [
+      "mise.toml",
+      ".mise.toml",
+      "mise.local.toml",
+      ".mise.local.toml",
+      "mise.lock",
+      "mise.local.lock",
+    ],
+  },
+  {
     name: "drizzle",
     color: color(palette.green),
     fileNames: ["drizzle.config.ts", "drizzle.config.js"],

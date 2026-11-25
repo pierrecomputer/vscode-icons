@@ -290,6 +290,12 @@
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
         ".vercelignore": "vercel",
+        "mise.toml": "mise",
+        ".mise.toml": "mise",
+        "mise.local.toml": "mise",
+        ".mise.local.toml": "mise",
+        "mise.lock": "mise",
+        "mise.local.lock": "mise",
         "drizzle.config.ts": "drizzle",
         "drizzle.config.js": "drizzle"
       },
@@ -491,6 +497,9 @@
         },
         "vercel": {
           "path": "./icons/vercel.svg"
+        },
+        "mise": {
+          "path": "./icons/mise.svg"
         },
         "drizzle": {
           "path": "./icons/drizzle-color.svg"
@@ -787,6 +796,12 @@
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
         ".vercelignore": "vercel",
+        "mise.toml": "mise",
+        ".mise.toml": "mise",
+        "mise.local.toml": "mise",
+        ".mise.local.toml": "mise",
+        "mise.lock": "mise",
+        "mise.local.lock": "mise",
         "drizzle.config.ts": "drizzle",
         "drizzle.config.js": "drizzle"
       },
@@ -988,6 +1003,9 @@
         },
         "vercel": {
           "path": "./icons/vercel-light.svg"
+        },
+        "mise": {
+          "path": "./icons/mise-light.svg"
         },
         "drizzle": {
           "path": "./icons/drizzle-color-light.svg"
