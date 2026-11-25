@@ -289,7 +289,9 @@
         "vercel.json": "vercel",
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
-        ".vercelignore": "vercel"
+        ".vercelignore": "vercel",
+        "drizzle.config.ts": "drizzle",
+        "drizzle.config.js": "drizzle"
       },
       "file_icons": {
         "default": {
@@ -489,6 +491,9 @@
         },
         "vercel": {
           "path": "./icons/vercel.svg"
+        },
+        "drizzle": {
+          "path": "./icons/drizzle-color.svg"
         },
         "vscode": {
           "path": "./icons/vscode-color.svg"
@@ -781,7 +786,9 @@
         "vercel.json": "vercel",
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
-        ".vercelignore": "vercel"
+        ".vercelignore": "vercel",
+        "drizzle.config.ts": "drizzle",
+        "drizzle.config.js": "drizzle"
       },
       "file_icons": {
         "default": {
@@ -981,6 +988,9 @@
         },
         "vercel": {
           "path": "./icons/vercel-light.svg"
+        },
+        "drizzle": {
+          "path": "./icons/drizzle-color-light.svg"
         },
         "vscode": {
           "path": "./icons/vscode-color-light.svg"
