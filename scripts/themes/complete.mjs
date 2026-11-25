@@ -336,6 +336,11 @@ const tooling = [
     fileNames: ["CLAUDE.md"],
   },
   {
+    name: "nuxt",
+    color: color(palette.green),
+    fileNames: ["nuxt.config.js", "nuxt.config.ts", "nuxt.config.mjs", "nuxt.config.mts"],
+  },
+  {
     name: "vercel",
     fileNames: ["vercel.json", "vercel.ts", "vercel.toml", ".vercelignore"],
   },

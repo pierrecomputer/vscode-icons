@@ -282,6 +282,10 @@
         "oxfmt.config.mts": "oxc",
         ".browserslistrc": "browserslist-duo",
         "CLAUDE.md": "claude",
+        "nuxt.config.js": "nuxt",
+        "nuxt.config.ts": "nuxt",
+        "nuxt.config.mjs": "nuxt",
+        "nuxt.config.mts": "nuxt",
         "vercel.json": "vercel",
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
@@ -479,6 +483,9 @@
         },
         "claude": {
           "path": "./icons/claude-color.svg"
+        },
+        "nuxt": {
+          "path": "./icons/nuxt-color.svg"
         },
         "vercel": {
           "path": "./icons/vercel.svg"
@@ -767,6 +774,10 @@
         "oxfmt.config.mts": "oxc",
         ".browserslistrc": "browserslist-duo",
         "CLAUDE.md": "claude",
+        "nuxt.config.js": "nuxt",
+        "nuxt.config.ts": "nuxt",
+        "nuxt.config.mjs": "nuxt",
+        "nuxt.config.mts": "nuxt",
         "vercel.json": "vercel",
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
@@ -964,6 +975,9 @@
         },
         "claude": {
           "path": "./icons/claude-color-light.svg"
+        },
+        "nuxt": {
+          "path": "./icons/nuxt-color-light.svg"
         },
         "vercel": {
           "path": "./icons/vercel-light.svg"
