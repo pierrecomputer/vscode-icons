@@ -250,6 +250,9 @@ const tooling = [
     ],
   },
   {
+    name: "docker-new",
+  },
+  {
     name: "tailwind",
     color: color(palette.cyan),
     fileNames: [

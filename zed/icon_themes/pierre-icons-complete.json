@@ -464,6 +464,9 @@
         "docker": {
           "path": "./icons/docker-color.svg"
         },
+        "docker-new": {
+          "path": "./icons/docker-new.svg"
+        },
         "tailwind": {
           "path": "./icons/tailwind-color.svg"
         },
@@ -974,6 +977,9 @@
         },
         "docker": {
           "path": "./icons/docker-color-light.svg"
+        },
+        "docker-new": {
+          "path": "./icons/docker-new-light.svg"
         },
         "tailwind": {
           "path": "./icons/tailwind-color-light.svg"
