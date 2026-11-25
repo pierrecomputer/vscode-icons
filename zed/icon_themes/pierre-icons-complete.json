@@ -84,6 +84,7 @@
         "cs": "lang-csharp",
         "m": "lang-objc",
         "mm": "lang-objc",
+        "blyx": "lang-blyx",
         "py": "lang-python",
         "pyw": "lang-python",
         "pyi": "lang-python",
@@ -344,6 +345,9 @@
         "lang-objc": {
           "path": "./icons/lang-objc-color.svg"
         },
+        "lang-blyx": {
+          "path": "./icons/lang-blyx-color.svg"
+        },
         "lang-python": {
           "path": "./icons/lang-python-color.svg"
         },
@@ -562,6 +566,7 @@
         "cs": "lang-csharp",
         "m": "lang-objc",
         "mm": "lang-objc",
+        "blyx": "lang-blyx",
         "py": "lang-python",
         "pyw": "lang-python",
         "pyi": "lang-python",
@@ -821,6 +826,9 @@
         },
         "lang-objc": {
           "path": "./icons/lang-objc-color-light.svg"
+        },
+        "lang-blyx": {
+          "path": "./icons/lang-blyx-color-light.svg"
         },
         "lang-python": {
           "path": "./icons/lang-python-color-light.svg"
