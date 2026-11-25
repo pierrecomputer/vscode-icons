@@ -336,6 +336,10 @@ const tooling = [
     fileNames: ["CLAUDE.md"],
   },
   {
+    name: "vercel",
+    fileNames: ["vercel.json", "vercel.ts", "vercel.toml", ".vercelignore"],
+  },
+  {
     name: "vscode",
     color: color(palette.blue),
     fileExtensions: ["code-workspace"],

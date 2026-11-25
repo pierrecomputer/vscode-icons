@@ -281,7 +281,11 @@
         "oxfmt.config.ts": "oxc",
         "oxfmt.config.mts": "oxc",
         ".browserslistrc": "browserslist-duo",
-        "CLAUDE.md": "claude"
+        "CLAUDE.md": "claude",
+        "vercel.json": "vercel",
+        "vercel.ts": "vercel",
+        "vercel.toml": "vercel",
+        ".vercelignore": "vercel"
       },
       "file_icons": {
         "default": {
@@ -475,6 +479,9 @@
         },
         "claude": {
           "path": "./icons/claude-color.svg"
+        },
+        "vercel": {
+          "path": "./icons/vercel.svg"
         },
         "vscode": {
           "path": "./icons/vscode-color.svg"
@@ -759,7 +766,11 @@
         "oxfmt.config.ts": "oxc",
         "oxfmt.config.mts": "oxc",
         ".browserslistrc": "browserslist-duo",
-        "CLAUDE.md": "claude"
+        "CLAUDE.md": "claude",
+        "vercel.json": "vercel",
+        "vercel.ts": "vercel",
+        "vercel.toml": "vercel",
+        ".vercelignore": "vercel"
       },
       "file_icons": {
         "default": {
@@ -953,6 +964,9 @@
         },
         "claude": {
           "path": "./icons/claude-color-light.svg"
+        },
+        "vercel": {
+          "path": "./icons/vercel-light.svg"
         },
         "vscode": {
           "path": "./icons/vscode-color-light.svg"
