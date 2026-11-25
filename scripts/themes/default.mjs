@@ -76,6 +76,11 @@ export default [
     fileExtensions: ["m", "mm"],
   },
   {
+    name: "lang-blyx",
+    color: duoColor(palette.blue, palette.orange),
+    fileExtensions: ["blyx"],
+  },
+  {
     name: "lang-python",
     color: duoColor(palette.blue, palette.yellow),
     fileExtensions: ["py", "pyw", "pyi", "pyx"],
