@@ -345,6 +345,10 @@ const tooling = [
     fileNames: ["vercel.json", "vercel.ts", "vercel.toml", ".vercelignore"],
   },
   {
+    name: "agents",
+    fileNames: ["AGENTS.md", "AGENTS.override.md"],
+  },
+  {
     name: "mise",
     fileNames: [
       "mise.toml",

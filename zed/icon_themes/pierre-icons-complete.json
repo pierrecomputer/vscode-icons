@@ -290,6 +290,8 @@
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
         ".vercelignore": "vercel",
+        "AGENTS.md": "agents",
+        "AGENTS.override.md": "agents",
         "mise.toml": "mise",
         ".mise.toml": "mise",
         "mise.local.toml": "mise",
@@ -497,6 +499,9 @@
         },
         "vercel": {
           "path": "./icons/vercel.svg"
+        },
+        "agents": {
+          "path": "./icons/agents.svg"
         },
         "mise": {
           "path": "./icons/mise.svg"
@@ -796,6 +801,8 @@
         "vercel.ts": "vercel",
         "vercel.toml": "vercel",
         ".vercelignore": "vercel",
+        "AGENTS.md": "agents",
+        "AGENTS.override.md": "agents",
         "mise.toml": "mise",
         ".mise.toml": "mise",
         "mise.local.toml": "mise",
@@ -1003,6 +1010,9 @@
         },
         "vercel": {
           "path": "./icons/vercel-light.svg"
+        },
+        "agents": {
+          "path": "./icons/agents-light.svg"
         },
         "mise": {
           "path": "./icons/mise-light.svg"
