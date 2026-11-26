@@ -275,6 +275,11 @@ const tooling = [
     ],
   },
   {
+    name: "rumdl",
+    color: color(palette.red),
+    fileNames: [".rumdl.toml", "rumdl.toml"],
+  },
+  {
     name: "browserslist-duo",
     color: color(palette.yellow),
     fileNames: [".browserslistrc"],
