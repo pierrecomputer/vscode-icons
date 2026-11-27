@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Pierre Icons for GitHub",
+  "description": "Pierre Icons (Complete) for files and folders on GitHub.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["icons.css", "github.css"],
+      "js": ["theme.js", "github.js"]
+    }
+  ]
+}

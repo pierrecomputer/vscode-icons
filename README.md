@@ -35,6 +35,17 @@ For development, watch mode rebuilds on SVG changes:
 npm run watch
 ```
 
+## Pierre Icons for GitHub
+
+The browser extension applies the Complete theme to repository listings, the repository sidebar, and the file tree on pull requests. It follows GitHub's light, dark, or system appearance.
+
+Run `npm ci` and `npm run build:web`. The unpacked extension is written to `dist/pierre-github-icons/`.
+
+- **Chrome and Edge** — Open `chrome://extensions` or `edge://extensions`, enable Developer mode, select **Load unpacked**, and choose that directory.
+- **Firefox** — Open `about:debugging#/runtime/this-firefox`, select **Load Temporary Add-on**, and choose `manifest.json` inside that directory.
+
+Refresh any open GitHub tabs after loading the extension.
+
 ## Preview
 
 Generate a three-column gallery of every icon in each theme:

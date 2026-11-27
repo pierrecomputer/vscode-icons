@@ -1,0 +1,19 @@
+@media (forced-colors: none) {
+  svg[data-pierre-file-icon] {
+    background: var(--pierre-icon-light) center / contain no-repeat;
+  }
+
+  svg[data-pierre-file-icon] > * {
+    opacity: 0;
+  }
+
+  html[data-color-mode="dark"] svg[data-pierre-file-icon] {
+    background-image: var(--pierre-icon-dark);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:is([data-color-mode="auto"], :not([data-color-mode])) svg[data-pierre-file-icon] {
+      background-image: var(--pierre-icon-dark);
+    }
+  }
+}
