@@ -1,5 +1,6 @@
 node_modules/
 /icons/
+/dist/pierre-github-icons/
 preview/
 test/
 .DS_Store

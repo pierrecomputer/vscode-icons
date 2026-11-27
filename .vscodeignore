@@ -5,6 +5,8 @@
 node_modules/
 package-lock.json
 preview/
+browser/
+dist/
 scripts/
 svgs/
 svgo.config.js
